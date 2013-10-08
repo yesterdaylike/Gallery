@@ -1,25 +1,25 @@
 # Disable the warnings of using dynamic method call in common library.
--dontnote com.android.gallery3d.common.*
+-dontnote com.zheng.gallery3d.common.*
 
-# Keep all classes extended from com.android.gallery3d.common.Entry
+# Keep all classes extended from com.zheng.gallery3d.common.Entry
 # Since we annotate on the fields and use reflection to create SQL
 # according to those field.
 
--keep class * extends com.android.gallery3d.common.Entry {
-    @com.android.gallery3d.common.Entry$Column <fields>;
+-keep class * extends com.zheng.gallery3d.common.Entry {
+    @com.zheng.gallery3d.common.Entry$Column <fields>;
 }
 
 # ctors of subclasses of CameraPreference are called with Java reflection.
--keep class * extends com.android.camera.CameraPreference {
+-keep class * extends com.zheng.camera.CameraPreference {
   <init>(...);
 }
 
--keep class com.android.camera.ActivityBase {
+-keep class com.zheng.camera.ActivityBase {
   public int getResultCode();
   public android.content.Intent getResultData();
 }
 
--keep class com.android.camera.CameraActivity {
+-keep class com.zheng.camera.CameraActivity {
   public boolean isRecording();
   public long getAutoFocusTime();
   public long getShutterLag();
@@ -29,21 +29,21 @@
   public long getCaptureStartTime();
 }
 
--keep class com.android.camera.VideoModule {
+-keep class com.zheng.camera.VideoModule {
   public void onCancelBgTraining(...);
   public void onProtectiveCurtainClick(...);
 }
 
 -keep class * extends android.app.Activity {
-  @com.android.camera.OnClickAttr <methods>;
+  @com.zheng.camera.OnClickAttr <methods>;
 }
 
--keep class com.android.camera.CameraHolder {
+-keep class com.zheng.camera.CameraHolder {
   public static void injectMockCamera(...);
 }
 
 # Disable the warnings of using dynamic method calls in EffectsRecorder
--dontnote com.android.camera.EffectsRecorder
+-dontnote com.zheng.camera.EffectsRecorder
 
 # Required for ActionBarSherlock
 -keep class android.support.v4.app.** { *; }

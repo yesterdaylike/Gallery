@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.ui;
+package com.zheng.gallery3d.ui;
 
 import android.content.Context;
 import android.graphics.Matrix;
-import com.android.gallery3d.anim.CanvasAnimation;
+import com.zheng.gallery3d.anim.CanvasAnimation;
 
 public class GLRootStub implements GLRoot {
     public void addOnGLIdleListener(OnGLIdleListener listener) {}

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.data;
+package com.zheng.gallery3d.data;
 
-import com.android.gallery3d.app.GalleryApp;
-import com.android.gallery3d.picasasource.PicasaSource;
+import com.zheng.gallery3d.app.GalleryApp;
+import com.zheng.gallery3d.picasasource.PicasaSource;
 
 import android.os.Looper;
 import android.test.AndroidTestCase;

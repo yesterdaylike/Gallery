@@ -15,7 +15,7 @@
  */
 
 
-package com.android.gallery3d.exif;
+package com.zheng.gallery3d.exif;
 
 import android.test.InstrumentationTestCase;
 

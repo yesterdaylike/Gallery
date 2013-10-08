@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.common;
+package com.zheng.gallery3d.common;
 
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;

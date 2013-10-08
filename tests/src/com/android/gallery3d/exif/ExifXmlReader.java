@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.exif;
+package com.zheng.gallery3d.exif;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

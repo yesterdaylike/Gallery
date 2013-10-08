@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.data;
+package com.zheng.gallery3d.data;
 
-import com.android.gallery3d.app.GalleryApp;
+import com.zheng.gallery3d.app.GalleryApp;
 
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;

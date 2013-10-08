@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.exif;
+package com.zheng.gallery3d.exif;
 
 import android.test.InstrumentationTestRunner;
 import android.test.InstrumentationTestSuite;
 import android.util.Log;
 
-import com.android.gallery3d.tests.R;
+import com.zheng.gallery3d.tests.R;
 
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

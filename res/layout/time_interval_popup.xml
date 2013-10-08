@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<com.android.camera.ui.TimeIntervalPopup xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zheng.camera.ui.TimeIntervalPopup xmlns:android="http://schemas.android.com/apk/res/android"
         style="@style/SettingPopupWindow">
 
     <LinearLayout android:orientation="vertical"
@@ -37,7 +37,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:orientation="horizontal">
-                <com.android.camera.ui.Switch
+                <com.zheng.camera.ui.Switch
                         android:id="@+id/time_lapse_switch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -87,4 +87,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</com.android.camera.ui.TimeIntervalPopup>
+</com.zheng.camera.ui.TimeIntervalPopup>

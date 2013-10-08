@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.data;
+package com.zheng.gallery3d.data;
 
-import com.android.gallery3d.app.GalleryApp;
-import com.android.gallery3d.app.StateManager;
-import com.android.gallery3d.app.StitchingProgressManager;
-import com.android.gallery3d.ui.GLRoot;
-import com.android.gallery3d.util.ThreadPool;
+import com.zheng.gallery3d.app.GalleryApp;
+import com.zheng.gallery3d.app.StateManager;
+import com.zheng.gallery3d.app.StitchingProgressManager;
+import com.zheng.gallery3d.ui.GLRoot;
+import com.zheng.gallery3d.util.ThreadPool;
 
 import android.content.ContentResolver;
 import android.content.Context;

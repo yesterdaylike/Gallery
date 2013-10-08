@@ -32,20 +32,20 @@
             android:layout_height="@dimen/pano_mosaic_surface_height" />
 
     <RelativeLayout style="@style/PanoViewHorizontalBar">
-        <com.android.camera.ui.RotateLayout
+        <com.zheng.camera.ui.RotateLayout
                 android:id="@+id/pano_saving_progress_bar_layout"
                 android:layout_centerInParent="true"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content">
-            <com.android.camera.PanoProgressBar
+            <com.zheng.camera.PanoProgressBar
                     android:id="@+id/pano_saving_progress_bar"
                     android:src="@drawable/ic_pan_progression"
                     android:layout_centerInParent="true"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content" />
-        </com.android.camera.ui.RotateLayout>
+        </com.zheng.camera.ui.RotateLayout>
 
-        <com.android.camera.ui.RotateImageView android:id="@+id/pano_review_cancel_button"
+        <com.zheng.camera.ui.RotateImageView android:id="@+id/pano_review_cancel_button"
                 style="@style/ReviewControlIcon"
                 android:contentDescription="@string/accessibility_review_cancel"
                 android:layout_alignParentRight="true"

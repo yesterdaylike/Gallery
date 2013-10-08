@@ -29,7 +29,7 @@
                 android:textAppearance="?android:textAppearanceMedium"
                 android:gravity="center" />
 
-        <com.android.camera.ui.RotateLayout
+        <com.zheng.camera.ui.RotateLayout
                 android:id="@+id/pano_rotate_reviewarea"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -38,24 +38,24 @@
                     android:scaleType="fitCenter"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent" />
-        </com.android.camera.ui.RotateLayout>
+        </com.zheng.camera.ui.RotateLayout>
 
         <View style="@style/PanoViewHorizontalBar"/>
     </LinearLayout>
 
-    <com.android.camera.ui.RotateLayout
+    <com.zheng.camera.ui.RotateLayout
             android:id="@+id/pano_saving_progress_bar_layout"
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/shutter_button_placeholder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-        <com.android.camera.PanoProgressBar
+        <com.zheng.camera.PanoProgressBar
                 android:id="@+id/pano_saving_progress_bar"
                 android:src="@drawable/ic_pan_progression"
                 android:layout_centerInParent="true"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content" />
-    </com.android.camera.ui.RotateLayout>
+    </com.zheng.camera.ui.RotateLayout>
 
     <ImageView android:id="@id/shutter_button_placeholder"
             android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
             android:layout_gravity="center"
             android:src="@drawable/btn_shutter_default"/>
 
-    <com.android.camera.ui.RotateImageView android:id="@id/pano_review_cancel_button"
+    <com.zheng.camera.ui.RotateImageView android:id="@id/pano_review_cancel_button"
             style="@style/ReviewControlIcon"
             android:contentDescription="@string/accessibility_review_cancel"
             android:layout_alignParentBottom="true"

@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.android.camera.ui.ListPrefSettingPopup xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zheng.camera.ui.ListPrefSettingPopup xmlns:android="http://schemas.android.com/apk/res/android"
         style="@style/SettingPopupWindow">
 
     <LinearLayout android:orientation="vertical"
@@ -38,4 +38,4 @@
                     android:choiceMode="singleChoice" />
         </FrameLayout>
     </LinearLayout>
-</com.android.camera.ui.ListPrefSettingPopup>
+</com.zheng.camera.ui.ListPrefSettingPopup>

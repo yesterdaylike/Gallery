@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content" />
         </FrameLayout>
 
-        <com.android.camera.ui.LayoutNotifyView
+        <com.zheng.camera.ui.LayoutNotifyView
                 android:id="@+id/pano_preview_area"
                 android:visibility="invisible"
                 android:background="@drawable/ic_pan_border_fast"
@@ -46,7 +46,7 @@
     </LinearLayout>
 
     <!-- The hint for "Too fast" text view -->
-    <com.android.camera.ui.RotateLayout
+    <com.zheng.camera.ui.RotateLayout
             android:id="@+id/pano_capture_too_fast_textview_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,24 +57,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="gone" />
-    </com.android.camera.ui.RotateLayout>
+    </com.zheng.camera.ui.RotateLayout>
 
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/placeholder">
-        <com.android.camera.ui.RotateLayout
+        <com.zheng.camera.ui.RotateLayout
                 android:id="@+id/pano_pan_progress_bar_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true">
-            <com.android.camera.PanoProgressBar
+            <com.zheng.camera.PanoProgressBar
                     android:id="@+id/pano_pan_progress_bar"
                     android:visibility="gone"
                     android:src="@drawable/ic_pan_progression"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-        </com.android.camera.ui.RotateLayout>
+        </com.zheng.camera.ui.RotateLayout>
 
         <ImageView
                 android:id="@+id/pano_pan_left_indicator"

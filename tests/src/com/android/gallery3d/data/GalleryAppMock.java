@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.data;
+package com.zheng.gallery3d.data;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Looper;
 
-import com.android.gallery3d.ui.GLRoot;
-import com.android.gallery3d.ui.GLRootStub;
+import com.zheng.gallery3d.ui.GLRoot;
+import com.zheng.gallery3d.ui.GLRootStub;
 
 class GalleryAppMock extends GalleryAppStub {
     GLRoot mGLRoot = new GLRootStub();

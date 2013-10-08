@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.ui;
+package com.zheng.gallery3d.ui;
 
 import javax.microedition.khronos.opengles.GL11;
 

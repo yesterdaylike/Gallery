@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.anim;
+package com.zheng.gallery3d.anim;
 
 import android.test.suitebuilder.annotation.SmallTest;
 import android.util.Log;

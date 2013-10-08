@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.android.gallery3d.data;
+package com.zheng.gallery3d.data;
 
-import com.android.gallery3d.data.MediaItem.BitmapInfo;
-import com.android.gallery3d.util.ThreadPool.Job;
+import com.zheng.gallery3d.data.MediaItem.BitmapInfo;
+import com.zheng.gallery3d.util.ThreadPool.Job;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapRegionDecoder;

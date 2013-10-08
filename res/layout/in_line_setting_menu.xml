@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<com.android.camera.ui.InLineSettingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zheng.camera.ui.InLineSettingMenu xmlns:android="http://schemas.android.com/apk/res/android"
         style="@style/SettingRow"
         android:background="@drawable/bg_pressed_exit_fading">
     <TextView android:id="@+id/title"
@@ -23,5 +23,5 @@
     <TextView android:id="@+id/current_setting"
             style="@style/SettingItemText" />
 
-</com.android.camera.ui.InLineSettingMenu>
+</com.zheng.camera.ui.InLineSettingMenu>
 
