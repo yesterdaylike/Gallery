@@ -17,17 +17,20 @@
 package com.zheng.gallery3d.app;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import android.annotation.TargetApi;
 import android.app.ActionBar.OnMenuVisibilityListener;
-import android.app.ActivityManager.RunningServiceInfo;
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.ActivityManager.RunningServiceInfo;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Rect;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcAdapter.CreateBeamUrisCallback;
@@ -44,7 +47,6 @@ import android.widget.Toast;
 import com.zheng.camera.CameraActivity;
 import com.zheng.camera.ProxyLauncher;
 import com.zheng.gallery3d.R;
-import com.zheng.gallery3d.app.StitchingProgressManager;
 import com.zheng.gallery3d.common.ApiHelper;
 import com.zheng.gallery3d.data.ComboAlbum;
 import com.zheng.gallery3d.data.DataManager;
@@ -165,6 +167,8 @@ public class PhotoPage extends ActivityState implements
     private boolean mHasCameraScreennailOrPlaceholder = false;
     private boolean mRecenterCameraOnResume = true;
 
+    private HashMap<Integer,Integer> mSoundMap;
+    private SoundPool mSoundPool;
     // These are only valid after the panorama callback
     private boolean mIsPanorama;
     private boolean mIsPanorama360;
@@ -287,6 +291,10 @@ public class PhotoPage extends ActivityState implements
         mSelectionManager = new SelectionManager(mActivity, false);
         mMenuExecutor = new MenuExecutor(mActivity, mSelectionManager);
 
+        mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        mSoundMap = new HashMap<Integer, Integer>();
+        mSoundMap.put(0, mSoundPool.load(mActivity, R.raw.video_record, 1));
+        
         mPhotoView = new PhotoView(mActivity);
         mPhotoView.setListener(this);
         mRootPane.addComponent(mPhotoView);
@@ -512,7 +520,7 @@ public class PhotoPage extends ActivityState implements
                 public void onPhotoChanged(int index, Path item) {
                     int oldIndex = mCurrentIndex;
                     mCurrentIndex = index;
-
+                    mSoundPool.play(mSoundMap.get(0), 1, 1, 1, 1, 1);
                     if (mHasCameraScreennailOrPlaceholder) {
                         if (mCurrentIndex > 0) {
                             mSkipUpdateCurrentPhoto = false;
