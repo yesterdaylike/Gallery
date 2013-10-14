@@ -16,6 +16,7 @@
 
 package com.zheng.gallery3d.app;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -25,11 +26,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.MotionEvent;
+import android.widget.Toast;
 
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.common.Utils;
@@ -61,8 +64,8 @@ public class SlideshowPage extends ActivityState {
 	private static final int MSG_LOAD_NEXT_BITMAP = 1;
 	private static final int MSG_SHOW_PENDING_BITMAP = 2;
 
-	private HashMap<Integer,Integer> mSoundMap;
-	private SoundPool mSoundPool;
+	private int mIndex = 0;
+	private MediaPlayer mediaPlayer;
 
 	public static interface Model {
 		public void pause();
@@ -130,10 +133,6 @@ public class SlideshowPage extends ActivityState {
 			mFlags |= FLAG_SCREEN_ON_ALWAYS;
 		}
 
-		mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-		mSoundMap = new HashMap<Integer, Integer>();
-		mSoundMap.put(0, mSoundPool.load(mActivity, R.raw.video_record, 1));
-
 		mHandler = new SynchronizedHandler(mActivity.getGLRoot()) {
 			@Override
 			public void handleMessage(Message message) {
@@ -180,7 +179,17 @@ public class SlideshowPage extends ActivityState {
 				.putExtra(KEY_ITEM_PATH, slide.item.getPath().toString())
 				.putExtra(KEY_PHOTO_INDEX, slide.index));
 		mHandler.sendEmptyMessageDelayed(MSG_LOAD_NEXT_BITMAP, SLIDESHOW_DELAY);
-		mSoundPool.play(mSoundMap.get(0), 1, 1, 1, 1, 1);
+
+		if(mediaPlayer!=null){
+			mediaPlayer.reset();
+		}
+		mediaPlayer=MediaPlayer.create(mActivity, PhotoPage.raws[mIndex%PhotoPage.raws.length]);
+		//mediaPlayer=MediaPlayer.create(mActivity, R.raw.she);
+		mediaPlayer.setLooping(true);
+			mediaPlayer.start();
+		if(mIndex>PhotoPage.raws.length){
+			mIndex = 0;
+		}
 	}
 
 	@Override
@@ -377,4 +386,16 @@ public class SlideshowPage extends ActivityState {
 			mMediaSet.removeContentListener(listener);
 		}
 	}
+
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		if(mediaPlayer!=null){
+			mediaPlayer.stop();
+			mediaPlayer.release();
+			mediaPlayer=null;
+		}
+		super.onDestroy();
+	}
+
 }

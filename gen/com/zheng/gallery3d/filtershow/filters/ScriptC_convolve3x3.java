@@ -16,7 +16,7 @@
 
 /*
  * This file is auto-generated. DO NOT MODIFY!
- * The source Renderscript file: D:\\Program Files\\Dropbox\\Program Files\\workspace\\Gallery\\src\\com\\zheng\\gallery3d\\filtershow\\filters\\convolve3x3.rs
+ * The source Renderscript file: D:\\Program Files\\Dropbox\\Program Files\\GitHub\\Gallery\\src\\com\\zheng\\gallery3d\\filtershow\\filters\\convolve3x3.rs
  */
 package com.zheng.gallery3d.filtershow.filters;
 

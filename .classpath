@@ -8,5 +8,9 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="D:/Program Files/Dropbox/Program Files/workspace/Camera4.2Need/core_intermediates.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Dropbox/Program Files/workspace/Camera4.2Need/framework_intermediates.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Dropbox/Program Files/workspace/Camera4.2Need/mp4parser_intermediates.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Dropbox/Program Files/workspace/Camera4.2Need/xmp_toolkit_intermediates.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
