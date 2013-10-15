@@ -16,10 +16,8 @@
 
 package com.zheng.gallery3d.common;
 
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.os.Build;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import org.apache.http.HttpVersion;
 import org.apache.http.client.HttpClient;
@@ -27,8 +25,10 @@ import org.apache.http.conn.params.ConnManagerParams;
 import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.params.HttpParams;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Build;
 
 /**
  * Constructs {@link HttpClient} instances and isolates client code from API

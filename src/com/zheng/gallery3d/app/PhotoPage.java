@@ -207,7 +207,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		R.raw.sayaka_numajiri,
 		R.raw.saya_hikita,
 		R.raw.panting_yeah,
-		R.raw.may_iikubo,	
+		R.raw.may_iikubo,
 	};
 
 	private final PanoramaSupportCallback mUpdatePanoramaMenuItemsCallback = new PanoramaSupportCallback() {

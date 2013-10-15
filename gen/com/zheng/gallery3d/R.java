@@ -2556,7 +2556,7 @@ CHAR LIMIT = NONE]
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zheng.gallery3d:title
+          @attr name android:title
         */
         public static final int CameraPreference_title = 0;
         /** Attributes that can be used with a CenteredLinearLayout.
@@ -2585,7 +2585,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zheng.gallery3d:max_width
+          @attr name android:max_width
         */
         public static final int CenteredLinearLayout_max_width = 0;
         /** Attributes that can be used with a IconIndicator.
@@ -2610,7 +2610,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zheng.gallery3d:icons
+          @attr name android:icons
         */
         public static final int IconIndicator_icons = 0;
         /**
@@ -2620,7 +2620,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zheng.gallery3d:modes
+          @attr name android:modes
         */
         public static final int IconIndicator_modes = 1;
         /** Attributes that can be used with a IconListPreference.
@@ -2649,7 +2649,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zheng.gallery3d:icons
+          @attr name android:icons
         */
         public static final int IconListPreference_icons = 0;
         /**
@@ -2659,7 +2659,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zheng.gallery3d:images
+          @attr name android:images
         */
         public static final int IconListPreference_images = 3;
         /**
@@ -2669,7 +2669,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zheng.gallery3d:largeIcons
+          @attr name android:largeIcons
         */
         public static final int IconListPreference_largeIcons = 2;
         /**
@@ -2681,7 +2681,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.zheng.gallery3d:singleIcon
+          @attr name android:singleIcon
         */
         public static final int IconListPreference_singleIcon = 1;
         /** Attributes that can be used with a ImageButtonTitle.
@@ -2690,8 +2690,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ImageButtonTitle_android_text android:text}</code></td><td></td></tr>
-           <tr><td><code>{@link #ImageButtonTitle_android_textColor android:textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ImageButtonTitle_android_text com.zheng.gallery3d:android_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #ImageButtonTitle_android_textColor com.zheng.gallery3d:android_textColor}</code></td><td></td></tr>
            </table>
            @see #ImageButtonTitle_android_text
            @see #ImageButtonTitle_android_textColor
@@ -2700,15 +2700,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x01010098, 0x0101014f
         };
         /**
-          <p>This symbol is the offset where the {@link android.R.attr#text}
+          <p>This symbol is the offset where the {@link com.zheng.gallery3d.R.attr#android_text}
           attribute's value can be found in the {@link #ImageButtonTitle} array.
-          @attr name android:text
+          @attr name android:android_text
         */
         public static final int ImageButtonTitle_android_text = 1;
         /**
-          <p>This symbol is the offset where the {@link android.R.attr#textColor}
+          <p>This symbol is the offset where the {@link com.zheng.gallery3d.R.attr#android_textColor}
           attribute's value can be found in the {@link #ImageButtonTitle} array.
-          @attr name android:textColor
+          @attr name android:android_textColor
         */
         public static final int ImageButtonTitle_android_textColor = 0;
         /** Attributes that can be used with a ListPreference.
@@ -2738,7 +2738,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-          @attr name com.zheng.gallery3d:defaultValue
+          @attr name android:defaultValue
         */
         public static final int ListPreference_defaultValue = 1;
         /**
@@ -2748,7 +2748,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zheng.gallery3d:entries
+          @attr name android:entries
         */
         public static final int ListPreference_entries = 3;
         /**
@@ -2758,7 +2758,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zheng.gallery3d:entryValues
+          @attr name android:entryValues
         */
         public static final int ListPreference_entryValues = 2;
         /**
@@ -2772,7 +2772,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zheng.gallery3d:key
+          @attr name android:key
         */
         public static final int ListPreference_key = 0;
         /** Attributes that can be used with a Theme_GalleryBase.
@@ -2803,7 +2803,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.zheng.gallery3d:listPreferredItemHeightSmall
+          @attr name android:listPreferredItemHeightSmall
         */
         public static final int Theme_GalleryBase_listPreferredItemHeightSmall = 0;
         /**
@@ -2813,7 +2813,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.zheng.gallery3d:switchStyle
+          @attr name android:switchStyle
         */
         public static final int Theme_GalleryBase_switchStyle = 1;
     };
