@@ -16,11 +16,13 @@
 
 package com.zheng.gallery3d.data;
 
-import com.zheng.gallery3d.common.Utils;
-import com.zheng.gallery3d.util.Future;
-
 import java.util.ArrayList;
 import java.util.WeakHashMap;
+
+import android.util.Log;
+
+import com.zheng.gallery3d.common.Utils;
+import com.zheng.gallery3d.util.Future;
 
 // MediaSet is a directory-like data structure.
 // It contains MediaItems and sub-MediaSets.

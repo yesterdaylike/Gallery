@@ -16,11 +16,13 @@
 
 package com.zheng.gallery3d.ui;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
+import android.os.Build;
 import android.os.Handler;
 import android.view.ActionMode;
 import android.view.ActionMode.Callback;
@@ -48,6 +50,7 @@ import com.zheng.gallery3d.util.ThreadPool.JobContext;
 
 import java.util.ArrayList;
 
+@SuppressLint("NewApi")
 public class ActionModeHandler implements Callback, PopupList.OnPopupItemClickListener {
 
     @SuppressWarnings("unused")
@@ -173,7 +176,7 @@ public class ActionModeHandler implements Callback, PopupList.OnPopupItemClickLi
             ProgressListener listener = null;
             String confirmMsg = null;
             int action = item.getItemId();
-            if (action == R.id.action_import) {
+            /*if (action == R.id.action_import) {
                 listener = new ImportCompleteListener(mActivity);
             } else if (action == R.id.action_delete) {
                 confirmMsg = mActivity.getResources().getQuantityString(
@@ -183,7 +186,7 @@ public class ActionModeHandler implements Callback, PopupList.OnPopupItemClickLi
                             "Gallery Delete Progress Listener");
                 }
                 listener = mDeleteProgressListener;
-            }
+            }*/
             mMenuExecutor.onMenuClicked(item, confirmMsg, listener);
         } finally {
             root.unlockRenderThread();
@@ -218,7 +221,8 @@ public class ActionModeHandler implements Callback, PopupList.OnPopupItemClickLi
         mSelectionMenu.updateSelectAllMode(mSelectionManager.inSelectAllMode());
     }
 
-    private final OnShareTargetSelectedListener mShareTargetSelectedListener =
+    @SuppressLint("NewApi")
+	private final OnShareTargetSelectedListener mShareTargetSelectedListener =
             new OnShareTargetSelectedListener() {
         @Override
         public boolean onShareTargetSelected(ShareActionProvider source, Intent intent) {
@@ -232,19 +236,21 @@ public class ActionModeHandler implements Callback, PopupList.OnPopupItemClickLi
         return false;
     }
 
-    @Override
+    @SuppressLint("NewApi")
+	@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+	@Override
     public boolean onCreateActionMode(ActionMode mode, Menu menu) {
         mode.getMenuInflater().inflate(R.menu.operation, menu);
 
         mMenu = menu;
-        mSharePanoramaMenuItem = menu.findItem(R.id.action_share_panorama);
+        /*mSharePanoramaMenuItem = menu.findItem(R.id.action_share_panorama);
         if (mSharePanoramaMenuItem != null) {
             mSharePanoramaActionProvider = (ShareActionProvider) mSharePanoramaMenuItem
                 .getActionProvider();
             mSharePanoramaActionProvider.setOnShareTargetSelectedListener(
                     mShareTargetSelectedListener);
             mSharePanoramaActionProvider.setShareHistoryFileName("panorama_share_history.xml");
-        }
+        }*/
         mShareMenuItem = menu.findItem(R.id.action_share);
         if (mShareMenuItem != null) {
             mShareActionProvider = (ShareActionProvider) mShareMenuItem
@@ -426,7 +432,9 @@ public class ActionModeHandler implements Callback, PopupList.OnPopupItemClickLi
                     return null;
                 }
                 mMainHandler.post(new Runnable() {
-                    @Override
+                    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+					@SuppressLint("NewApi")
+					@Override
                     public void run() {
                         mMenuTask = null;
                         if (jc.isCancelled()) return;

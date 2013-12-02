@@ -16,15 +16,16 @@
 
 package com.zheng.gallery3d.util;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-
-import com.zheng.gallery3d.common.BlobCache;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.util.Log;
+
+import com.zheng.gallery3d.common.BlobCache;
 
 public class CacheManager {
     private static final String TAG = "CacheManager";

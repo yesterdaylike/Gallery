@@ -16,6 +16,8 @@
 
 package com.zheng.gallery3d.data;
 
+import java.util.ArrayList;
+
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -25,14 +27,13 @@ import android.provider.MediaStore.Images;
 import android.provider.MediaStore.Images.ImageColumns;
 import android.provider.MediaStore.Video;
 import android.provider.MediaStore.Video.VideoColumns;
+import android.util.Log;
 
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.app.GalleryApp;
 import com.zheng.gallery3d.common.Utils;
 import com.zheng.gallery3d.util.GalleryUtils;
 import com.zheng.gallery3d.util.MediaSetUtils;
-
-import java.util.ArrayList;
 
 // LocalAlbumSet lists all media items in one bucket on local storage.
 // The media items need to be all images or all videos, but not both.

@@ -16,6 +16,8 @@
 
 package com.zheng.gallery3d.data;
 
+import java.io.File;
+
 import android.content.ContentResolver;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -23,6 +25,7 @@ import android.graphics.BitmapRegionDecoder;
 import android.net.Uri;
 import android.provider.MediaStore.Video;
 import android.provider.MediaStore.Video.VideoColumns;
+import android.util.Log;
 
 import com.zheng.gallery3d.app.GalleryApp;
 import com.zheng.gallery3d.common.BitmapUtils;
@@ -30,7 +33,6 @@ import com.zheng.gallery3d.util.GalleryUtils;
 import com.zheng.gallery3d.util.ThreadPool.Job;
 import com.zheng.gallery3d.util.ThreadPool.JobContext;
 import com.zheng.gallery3d.util.UpdateHelper;
-import java.io.File;
 // LocalVideo represents a video in the local storage.
 public class LocalVideo extends LocalMediaItem {
     private static final String TAG = "LocalVideo";

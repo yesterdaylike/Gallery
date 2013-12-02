@@ -16,6 +16,16 @@
 
 package com.zheng.gallery3d.ui;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
+
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
+import javax.microedition.khronos.opengles.GL11;
+
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Matrix;
@@ -25,6 +35,7 @@ import android.os.Build;
 import android.os.Process;
 import android.os.SystemClock;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.View;
@@ -36,15 +47,6 @@ import com.zheng.gallery3d.common.Utils;
 import com.zheng.gallery3d.util.GalleryUtils;
 import com.zheng.gallery3d.util.MotionEventHelper;
 import com.zheng.gallery3d.util.Profile;
-
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.ReentrantLock;
-
-import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.opengles.GL10;
-import javax.microedition.khronos.opengles.GL11;
 
 // The root component of all <code>GLView</code>s. The rendering is done in GL
 // thread while the event handling is done in the main thread.  To synchronize
@@ -170,7 +172,8 @@ public class GLRootView extends GLSurfaceView
         superRequestRender();
     }
 
-    @Override
+    @SuppressLint("NewApi")
+	@Override
     public void requestRender() {
         if (DEBUG_INVALIDATE) {
             StackTraceElement e = Thread.currentThread().getStackTrace()[4];

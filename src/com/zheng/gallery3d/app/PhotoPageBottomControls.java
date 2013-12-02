@@ -90,7 +90,7 @@ public class PhotoPageBottomControls implements OnClickListener {
         mContainer.clearAnimation();
         mContainerAnimIn.reset();
         mContainer.startAnimation(mContainerAnimIn);
-        mContainer.setVisibility(View.VISIBLE);
+        mContainer.setVisibility(View.INVISIBLE); //mContainer.setVisibility(View.VISIBLE);
     }
 
     public void refresh() {

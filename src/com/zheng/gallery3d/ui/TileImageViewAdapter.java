@@ -23,6 +23,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.BitmapRegionDecoder;
 import android.graphics.Canvas;
 import android.graphics.Rect;
+import android.util.Log;
 
 import com.zheng.gallery3d.common.ApiHelper;
 import com.zheng.gallery3d.common.Utils;

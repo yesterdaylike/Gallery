@@ -16,6 +16,9 @@
 
 package com.zheng.gallery3d.app;
 
+import java.util.ArrayList;
+
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.ActionBar.OnMenuVisibilityListener;
@@ -26,6 +29,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -39,8 +43,8 @@ import android.widget.TwoLineListItem;
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.common.ApiHelper;
 
-import java.util.ArrayList;
-
+@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+@SuppressLint("NewApi")
 public class GalleryActionBar implements OnNavigationListener {
     @SuppressWarnings("unused")
     private static final String TAG = "GalleryActionBar";
@@ -95,16 +99,16 @@ public class GalleryActionBar implements OnNavigationListener {
     }
 
     private static final ActionItem[] sClusterItems = new ActionItem[] {
-        new ActionItem(FilterUtils.CLUSTER_BY_ALBUM, true, false, R.string.albums,
+    	new ActionItem(FilterUtils.CLUSTER_BY_ALBUM, true, false, R.string.albums,
                 R.string.group_by_album),
-        new ActionItem(FilterUtils.CLUSTER_BY_LOCATION, true, false,
+        /*new ActionItem(FilterUtils.CLUSTER_BY_LOCATION, true, false,
                 R.string.locations, R.string.location, R.string.group_by_location),
         new ActionItem(FilterUtils.CLUSTER_BY_TIME, true, false, R.string.times,
                 R.string.time, R.string.group_by_time),
         new ActionItem(FilterUtils.CLUSTER_BY_FACE, true, false, R.string.people,
                 R.string.group_by_faces),
         new ActionItem(FilterUtils.CLUSTER_BY_TAG, true, false, R.string.tags,
-                R.string.group_by_tags)
+                R.string.group_by_tags)*/
     };
 
     private class ClusterAdapter extends BaseAdapter {
@@ -229,7 +233,8 @@ public class GalleryActionBar implements OnNavigationListener {
     }
 
     public int getClusterTypeAction() {
-        return sClusterItems[mCurrentIndex].action;
+        //return sClusterItems[mCurrentIndex].action;
+    	return -1;
     }
 
     public void enableClusterMenu(int action, ClusterRunner runner) {
@@ -326,13 +331,15 @@ public class GalleryActionBar implements OnNavigationListener {
     }
 
     public void setTitle(String title) {
-        if (mActionBar != null) mActionBar.setTitle(title);
+        /*if (mActionBar != null) mActionBar.setTitle(title);*/
+    	mActivity.setTitle(title);
     }
 
     public void setTitle(int titleId) {
-        if (mActionBar != null) {
+        /*if (mActionBar != null) {
             mActionBar.setTitle(mContext.getString(titleId));
-        }
+        }*/
+    	mActivity.setTitle(titleId);
     }
 
     public void setSubtitle(String title) {
@@ -395,20 +402,22 @@ public class GalleryActionBar implements OnNavigationListener {
     private Intent mSharePanoramaIntent;
     private Intent mShareIntent;
 
-    public void createActionBarMenu(int menuRes, Menu menu) {
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+	@SuppressLint("NewApi")
+	public void createActionBarMenu(int menuRes, Menu menu) {
         mActivity.getMenuInflater().inflate(menuRes, menu);
         mActionBarMenu = menu;
 
-        MenuItem item = menu.findItem(R.id.action_share_panorama);
+        /*MenuItem item = menu.findItem(R.id.action_share_panorama);
         if (item != null) {
             mSharePanoramaActionProvider = (ShareActionProvider)
                 item.getActionProvider();
             mSharePanoramaActionProvider
                 .setShareHistoryFileName("panorama_share_history.xml");
             mSharePanoramaActionProvider.setShareIntent(mSharePanoramaIntent);
-        }
+        }*/
 
-        item = menu.findItem(R.id.action_share);
+        MenuItem item = menu.findItem(R.id.action_share);
         if (item != null) {
             mShareActionProvider = (ShareActionProvider)
                 item.getActionProvider();
@@ -422,7 +431,9 @@ public class GalleryActionBar implements OnNavigationListener {
         return mActionBarMenu;
     }
 
-    public void setShareIntents(Intent sharePanoramaIntent, Intent shareIntent) {
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+	@SuppressLint("NewApi")
+	public void setShareIntents(Intent sharePanoramaIntent, Intent shareIntent) {
         mSharePanoramaIntent = sharePanoramaIntent;
         if (mSharePanoramaActionProvider != null) {
             mSharePanoramaActionProvider.setShareIntent(sharePanoramaIntent);

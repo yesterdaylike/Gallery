@@ -16,14 +16,13 @@
 
 package com.zheng.gallery3d.util;
 
+import java.util.LinkedList;
+
+import android.util.Log;
+
 import com.zheng.gallery3d.common.Utils;
-import com.zheng.gallery3d.util.Future;
-import com.zheng.gallery3d.util.FutureListener;
-import com.zheng.gallery3d.util.ThreadPool;
 import com.zheng.gallery3d.util.ThreadPool.Job;
 import com.zheng.gallery3d.util.ThreadPool.JobContext;
-
-import java.util.LinkedList;
 
 // Limit the number of concurrent jobs that has been submitted into a ThreadPool
 @SuppressWarnings("rawtypes")

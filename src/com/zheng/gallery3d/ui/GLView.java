@@ -16,15 +16,16 @@
 
 package com.zheng.gallery3d.ui;
 
+import java.util.ArrayList;
+
 import android.graphics.Rect;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.MotionEvent;
 
 import com.zheng.gallery3d.anim.CanvasAnimation;
 import com.zheng.gallery3d.anim.StateTransitionAnimation;
 import com.zheng.gallery3d.common.Utils;
-
-import java.util.ArrayList;
 
 // GLView is a UI component. It can render to a GLCanvas and accept touch
 // events. A GLView may have zero or more child GLView and they form a tree

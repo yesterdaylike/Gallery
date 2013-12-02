@@ -14,8 +14,6 @@
      limitations under the License.
 -->
 <resources>
-    <item name="btn_video_shutter_recording_holo" type="drawable">@drawable/btn_video_shutter_recording_holo_xlarge</item>
-    <item name="btn_video_shutter_recording_pressed_holo" type="drawable">@drawable/btn_video_shutter_recording_pressed_holo_xlarge</item>
     <item name="ic_effects_holo_light" type="drawable">@drawable/ic_effects_holo_light_xlarge</item>
     <item name="ic_exposure_holo_light" type="drawable">@drawable/ic_exposure_holo_light_xlarge</item>
     <item name="ic_flash_auto_holo_light" type="drawable">@drawable/ic_flash_auto_holo_light_xlarge</item>

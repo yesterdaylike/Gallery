@@ -16,6 +16,10 @@
 
 package com.zheng.gallery3d.data;
 
+import java.io.FileDescriptor;
+import java.io.FileInputStream;
+import java.io.InputStream;
+
 import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -24,17 +28,13 @@ import android.graphics.BitmapFactory.Options;
 import android.graphics.BitmapRegionDecoder;
 import android.os.Build;
 import android.util.FloatMath;
+import android.util.Log;
 
 import com.zheng.gallery3d.common.ApiHelper;
 import com.zheng.gallery3d.common.BitmapUtils;
 import com.zheng.gallery3d.common.Utils;
-import com.zheng.gallery3d.ui.Log;
 import com.zheng.gallery3d.util.ThreadPool.CancelListener;
 import com.zheng.gallery3d.util.ThreadPool.JobContext;
-
-import java.io.FileDescriptor;
-import java.io.FileInputStream;
-import java.io.InputStream;
 
 public class DecodeUtils {
     private static final String TAG = "DecodeUtils";

@@ -19,6 +19,7 @@ package com.zheng.gallery3d.ui;
 import android.graphics.RectF;
 import android.opengl.GLU;
 import android.opengl.Matrix;
+import android.util.Log;
 
 import com.zheng.gallery3d.common.Utils;
 import com.zheng.gallery3d.util.IntArray;

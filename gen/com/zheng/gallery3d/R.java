@@ -392,584 +392,366 @@ containing a value of this type.
         public static final int border_photo_frame_widget_focused_holo=0x7f020009;
         public static final int border_photo_frame_widget_holo=0x7f02000a;
         public static final int border_photo_frame_widget_pressed_holo=0x7f02000b;
-        public static final int btn_camera_shutter_holo=0x7f02000c;
-        public static final int btn_camera_shutter_holo_large=0x7f02000d;
-        public static final int btn_camera_shutter_holo_xlarge=0x7f02000e;
-        public static final int btn_camera_shutter_pressed_holo=0x7f02000f;
-        public static final int btn_camera_shutter_pressed_holo_large=0x7f020010;
-        public static final int btn_camera_shutter_pressed_holo_xlarge=0x7f020011;
-        public static final int btn_default_normal_holo_dark=0x7f020012;
-        public static final int btn_default_pressed_holo_dark=0x7f020013;
-        public static final int btn_make_offline_disabled_on_holo_dark=0x7f020014;
-        public static final int btn_make_offline_normal_off_holo_dark=0x7f020015;
-        public static final int btn_make_offline_normal_on_holo_dark=0x7f020016;
-        public static final int btn_new_shutter=0x7f020017;
-        public static final int btn_new_shutter_video=0x7f020018;
-        public static final int btn_pan_shutter_pressed_holo=0x7f020019;
-        public static final int btn_pan_shutter_pressed_holo_large=0x7f02001a;
-        public static final int btn_pan_shutter_pressed_holo_xlarge=0x7f02001b;
-        public static final int btn_pan_shutter_recording_holo=0x7f02001c;
-        public static final int btn_pan_shutter_recording_holo_large=0x7f02001d;
-        public static final int btn_pan_shutter_recording_holo_xlarge=0x7f02001e;
-        public static final int btn_pan_shutter_recording_pressed_holo=0x7f02001f;
-        public static final int btn_pan_shutter_recording_pressed_holo_large=0x7f020020;
-        public static final int btn_pan_shutter_recording_pressed_holo_xlarge=0x7f020021;
-        public static final int btn_shutter_default=0x7f020022;
-        public static final int btn_shutter_pano_pressed=0x7f020023;
-        public static final int btn_shutter_pressed=0x7f020024;
-        public static final int btn_shutter_recording=0x7f020025;
-        public static final int btn_shutter_video_default=0x7f020026;
-        public static final int btn_shutter_video_pressed=0x7f020027;
-        public static final int btn_shutter_video_recording=0x7f020028;
-        public static final int btn_video_shutter_holo=0x7f020029;
-        public static final int btn_video_shutter_holo_large=0x7f02002a;
-        public static final int btn_video_shutter_holo_xlarge=0x7f02002b;
-        public static final int btn_video_shutter_pressed_holo=0x7f02002c;
-        public static final int btn_video_shutter_pressed_holo_large=0x7f02002d;
-        public static final int btn_video_shutter_pressed_holo_xlarge=0x7f02002e;
-        public static final int btn_video_shutter_recording_holo=0x7f02002f;
-        public static final int btn_video_shutter_recording_holo_large=0x7f020030;
-        public static final int btn_video_shutter_recording_holo_xlarge=0x7f020031;
-        public static final int btn_video_shutter_recording_pressed_holo=0x7f020032;
-        public static final int btn_video_shutter_recording_pressed_holo_large=0x7f020033;
-        public static final int btn_video_shutter_recording_pressed_holo_xlarge=0x7f020034;
-        public static final int cab_divider_vertical_dark=0x7f020035;
-        public static final int camera_crop=0x7f020036;
-        public static final int camera_crop_holo=0x7f020037;
-        public static final int dialog_full_holo_dark=0x7f020038;
-        public static final int dropdown_ic_arrow_normal_holo_dark=0x7f020039;
-        public static final int filtershow_background=0x7f02003a;
-        public static final int filtershow_border_4x5=0x7f02003b;
-        public static final int filtershow_border_black=0x7f02003c;
-        public static final int filtershow_border_brush=0x7f02003d;
-        public static final int filtershow_border_film=0x7f02003e;
-        public static final int filtershow_border_grunge=0x7f02003f;
-        public static final int filtershow_border_rounded_black=0x7f020040;
-        public static final int filtershow_border_rounded_white=0x7f020041;
-        public static final int filtershow_border_sumi_e=0x7f020042;
-        public static final int filtershow_border_tape=0x7f020043;
-        public static final int filtershow_border_white=0x7f020044;
-        public static final int filtershow_button_background=0x7f020045;
-        public static final int filtershow_button_border=0x7f020046;
-        public static final int filtershow_button_colors=0x7f020047;
-        public static final int filtershow_button_colors_contrast=0x7f020048;
-        public static final int filtershow_button_colors_curve=0x7f020049;
-        public static final int filtershow_button_colors_sharpen=0x7f02004a;
-        public static final int filtershow_button_colors_vignette=0x7f02004b;
-        public static final int filtershow_button_current=0x7f02004c;
-        public static final int filtershow_button_fx=0x7f02004d;
-        public static final int filtershow_button_geometry=0x7f02004e;
-        public static final int filtershow_button_geometry_crop=0x7f02004f;
-        public static final int filtershow_button_geometry_flip=0x7f020050;
-        public static final int filtershow_button_geometry_rotate=0x7f020051;
-        public static final int filtershow_button_geometry_straighten=0x7f020052;
-        public static final int filtershow_button_operations=0x7f020053;
-        public static final int filtershow_button_origin=0x7f020054;
-        public static final int filtershow_button_redo=0x7f020055;
-        public static final int filtershow_button_selected_background=0x7f020056;
-        public static final int filtershow_button_settings=0x7f020057;
-        public static final int filtershow_button_show_original=0x7f020058;
-        public static final int filtershow_button_undo=0x7f020059;
-        public static final int filtershow_fx_0000_vintage=0x7f02005a;
-        public static final int filtershow_fx_0001_instant=0x7f02005b;
-        public static final int filtershow_fx_0002_bleach=0x7f02005c;
-        public static final int filtershow_fx_0003_blue_crush=0x7f02005d;
-        public static final int filtershow_fx_0004_bw_contrast=0x7f02005e;
-        public static final int filtershow_fx_0005_punch=0x7f02005f;
-        public static final int filtershow_fx_0006_x_process=0x7f020060;
-        public static final int filtershow_fx_0007_washout=0x7f020061;
-        public static final int filtershow_fx_0008_washout_color=0x7f020062;
-        public static final int focus_box=0x7f020063;
-        public static final int frame_overlay_gallery_camera=0x7f020064;
-        public static final int frame_overlay_gallery_folder=0x7f020065;
-        public static final int frame_overlay_gallery_picasa=0x7f020066;
-        public static final int frame_overlay_gallery_ptp=0x7f020067;
-        public static final int grid_pressed=0x7f020068;
-        public static final int grid_selected=0x7f020069;
-        public static final int ic_360pano_holo_light=0x7f02006a;
-        public static final int ic_btn_shutter_retake=0x7f02006b;
-        public static final int ic_cameraalbum_overlay=0x7f02006c;
-        public static final int ic_control_play=0x7f02006d;
-        public static final int ic_effects_holo_light=0x7f02006e;
-        public static final int ic_effects_holo_light_large=0x7f02006f;
-        public static final int ic_effects_holo_light_xlarge=0x7f020070;
-        public static final int ic_exposure_0=0x7f020071;
-        public static final int ic_exposure_holo_light=0x7f020072;
-        public static final int ic_exposure_holo_light_large=0x7f020073;
-        public static final int ic_exposure_holo_light_xlarge=0x7f020074;
-        public static final int ic_exposure_n1=0x7f020075;
-        public static final int ic_exposure_n2=0x7f020076;
-        public static final int ic_exposure_n3=0x7f020077;
-        public static final int ic_exposure_p1=0x7f020078;
-        public static final int ic_exposure_p2=0x7f020079;
-        public static final int ic_exposure_p3=0x7f02007a;
-        public static final int ic_flash_auto_holo_light=0x7f02007b;
-        public static final int ic_flash_auto_holo_light_large=0x7f02007c;
-        public static final int ic_flash_auto_holo_light_xlarge=0x7f02007d;
-        public static final int ic_flash_off_holo_light=0x7f02007e;
-        public static final int ic_flash_off_holo_light_large=0x7f02007f;
-        public static final int ic_flash_off_holo_light_xlarge=0x7f020080;
-        public static final int ic_flash_on_holo_light=0x7f020081;
-        public static final int ic_flash_on_holo_light_large=0x7f020082;
-        public static final int ic_flash_on_holo_light_xlarge=0x7f020083;
-        public static final int ic_flash_torch=0x7f020084;
-        public static final int ic_gallery_play=0x7f020085;
-        public static final int ic_gallery_play_big=0x7f020086;
-        public static final int ic_hdr=0x7f020087;
-        public static final int ic_indicator_ev_0=0x7f020088;
-        public static final int ic_indicator_ev_n1=0x7f020089;
-        public static final int ic_indicator_ev_n2=0x7f02008a;
-        public static final int ic_indicator_ev_n3=0x7f02008b;
-        public static final int ic_indicator_ev_p1=0x7f02008c;
-        public static final int ic_indicator_ev_p2=0x7f02008d;
-        public static final int ic_indicator_ev_p3=0x7f02008e;
-        public static final int ic_indicator_flash_auto=0x7f02008f;
-        public static final int ic_indicator_flash_off=0x7f020090;
-        public static final int ic_indicator_flash_on=0x7f020091;
-        public static final int ic_indicator_hdr_off=0x7f020092;
-        public static final int ic_indicator_hdr_on=0x7f020093;
-        public static final int ic_indicator_sce_off=0x7f020094;
-        public static final int ic_indicator_sce_on=0x7f020095;
-        public static final int ic_lockscreen_chevron_up=0x7f020096;
-        public static final int ic_manage_pin=0x7f020097;
-        public static final int ic_menu_camera_holo_light=0x7f020098;
-        public static final int ic_menu_camera_video_view=0x7f020099;
-        public static final int ic_menu_cancel_holo_light=0x7f02009a;
-        public static final int ic_menu_done_holo_light=0x7f02009b;
-        public static final int ic_menu_info_details=0x7f02009c;
-        public static final int ic_menu_make_offline=0x7f02009d;
-        public static final int ic_menu_ptp_holo_light=0x7f02009e;
-        public static final int ic_menu_revert_holo_dark=0x7f02009f;
-        public static final int ic_menu_save_holo_light=0x7f0200a0;
-        public static final int ic_menu_savephoto=0x7f0200a1;
-        public static final int ic_menu_share_holo_light=0x7f0200a2;
-        public static final int ic_menu_slideshow_holo_light=0x7f0200a3;
-        public static final int ic_menu_tiny_planet=0x7f0200a4;
-        public static final int ic_menu_trash_holo_light=0x7f0200a5;
-        public static final int ic_menuselect_camera_facing_back=0x7f0200a6;
-        public static final int ic_menuselect_camera_facing_front=0x7f0200a7;
-        public static final int ic_menuselect_gps_off=0x7f0200a8;
-        public static final int ic_menuselect_gps_on=0x7f0200a9;
-        public static final int ic_pan_border_fast=0x7f0200aa;
-        public static final int ic_pan_border_fast_large=0x7f0200ab;
-        public static final int ic_pan_border_fast_xlarge=0x7f0200ac;
-        public static final int ic_pan_left_indicator=0x7f0200ad;
-        public static final int ic_pan_left_indicator_fast=0x7f0200ae;
-        public static final int ic_pan_left_indicator_fast_large=0x7f0200af;
-        public static final int ic_pan_left_indicator_fast_xlarge=0x7f0200b0;
-        public static final int ic_pan_left_indicator_large=0x7f0200b1;
-        public static final int ic_pan_left_indicator_xlarge=0x7f0200b2;
-        public static final int ic_pan_progression=0x7f0200b3;
-        public static final int ic_pan_progression_large=0x7f0200b4;
-        public static final int ic_pan_progression_xlarge=0x7f0200b5;
-        public static final int ic_pan_recording_indicator=0x7f0200b6;
-        public static final int ic_pan_right_indicator=0x7f0200b7;
-        public static final int ic_pan_right_indicator_fast=0x7f0200b8;
-        public static final int ic_pan_right_indicator_fast_large=0x7f0200b9;
-        public static final int ic_pan_right_indicator_fast_xlarge=0x7f0200ba;
-        public static final int ic_pan_right_indicator_large=0x7f0200bb;
-        public static final int ic_pan_right_indicator_xlarge=0x7f0200bc;
-        public static final int ic_pan_thumb=0x7f0200bd;
-        public static final int ic_photoeditor_border=0x7f0200be;
-        public static final int ic_photoeditor_color=0x7f0200bf;
-        public static final int ic_photoeditor_effects=0x7f0200c0;
-        public static final int ic_photoeditor_fix=0x7f0200c1;
-        public static final int ic_recording_indicator=0x7f0200c2;
-        public static final int ic_scn_holo_light=0x7f0200c3;
-        public static final int ic_scn_holo_light_large=0x7f0200c4;
-        public static final int ic_scn_holo_light_xlarge=0x7f0200c5;
-        public static final int ic_settings_holo_light=0x7f0200c6;
-        public static final int ic_settings_holo_light_large=0x7f0200c7;
-        public static final int ic_settings_holo_light_xlarge=0x7f0200c8;
-        public static final int ic_snapshot_border=0x7f0200c9;
-        public static final int ic_snapshot_border_large=0x7f0200ca;
-        public static final int ic_snapshot_border_xlarge=0x7f0200cb;
-        public static final int ic_switch_camera=0x7f0200cc;
-        public static final int ic_switch_pan=0x7f0200cd;
-        public static final int ic_switch_pano_active=0x7f0200ce;
-        public static final int ic_switch_photo_facing_holo_light=0x7f0200cf;
-        public static final int ic_switch_photo_facing_holo_light_large=0x7f0200d0;
-        public static final int ic_switch_photo_facing_holo_light_xlarge=0x7f0200d1;
-        public static final int ic_switch_photosphere=0x7f0200d2;
-        public static final int ic_switch_video=0x7f0200d3;
-        public static final int ic_switch_video_active=0x7f0200d4;
-        public static final int ic_switch_video_facing_holo_light=0x7f0200d5;
-        public static final int ic_switch_video_facing_holo_light_large=0x7f0200d6;
-        public static final int ic_switch_video_facing_holo_light_xlarge=0x7f0200d7;
-        public static final int ic_switcher_menu_indicator=0x7f0200d8;
-        public static final int ic_timelapse_none=0x7f0200d9;
-        public static final int ic_timelapse_none_large=0x7f0200da;
-        public static final int ic_timelapse_none_xlarge=0x7f0200db;
-        public static final int ic_vidcontrol_pause=0x7f0200dc;
-        public static final int ic_vidcontrol_play=0x7f0200dd;
-        public static final int ic_vidcontrol_reload=0x7f0200de;
-        public static final int ic_video_effects_background_fields_of_wheat_holo=0x7f0200df;
-        public static final int ic_video_effects_background_intergalactic_holo=0x7f0200e0;
-        public static final int ic_video_effects_background_normal_holo_dark=0x7f0200e1;
-        public static final int ic_video_effects_faces_big_eyes_holo_dark=0x7f0200e2;
-        public static final int ic_video_effects_faces_big_mouth_holo_dark=0x7f0200e3;
-        public static final int ic_video_effects_faces_big_nose_holo_dark=0x7f0200e4;
-        public static final int ic_video_effects_faces_small_eyes_holo_dark=0x7f0200e5;
-        public static final int ic_video_effects_faces_small_mouth_holo_dark=0x7f0200e6;
-        public static final int ic_video_effects_faces_squeeze_holo_dark=0x7f0200e7;
-        public static final int ic_video_thumb=0x7f0200e8;
-        public static final int ic_view_photosphere=0x7f0200e9;
-        public static final int ic_viewfinder_camera_facing_back=0x7f0200ea;
-        public static final int ic_viewfinder_camera_facing_front=0x7f0200eb;
-        public static final int ic_viewfinder_gps_no_signal=0x7f0200ec;
-        public static final int ic_viewfinder_gps_off=0x7f0200ed;
-        public static final int ic_viewfinder_gps_on=0x7f0200ee;
-        public static final int ic_wb_auto=0x7f0200ef;
-        public static final int ic_wb_cloudy=0x7f0200f0;
-        public static final int ic_wb_fluorescent=0x7f0200f1;
-        public static final int ic_wb_incandescent=0x7f0200f2;
-        public static final int ic_wb_sunlight=0x7f0200f3;
-        public static final int ic_zoom_big=0x7f0200f4;
-        public static final int ic_zoom_big_dark=0x7f0200f5;
-        public static final int ic_zoom_big_dark_large=0x7f0200f6;
-        public static final int ic_zoom_big_large=0x7f0200f7;
-        public static final int icn_media_pause=0x7f0200f8;
-        public static final int icn_media_pause_focused_holo_dark=0x7f0200f9;
-        public static final int icn_media_pause_normal_holo_dark=0x7f0200fa;
-        public static final int icn_media_pause_pressed_holo_dark=0x7f0200fb;
-        public static final int icn_media_play=0x7f0200fc;
-        public static final int icn_media_play_focused_holo_dark=0x7f0200fd;
-        public static final int icn_media_play_normal_holo_dark=0x7f0200fe;
-        public static final int icn_media_play_pressed_holo_dark=0x7f0200ff;
-        public static final int list_divider=0x7f020100;
-        public static final int list_divider_holo_dark=0x7f020101;
-        public static final int list_divider_large=0x7f020102;
-        public static final int list_pressed_holo_light=0x7f020103;
-        public static final int menu_dropdown_panel_holo_dark=0x7f020104;
-        public static final int on_screen_hint_frame=0x7f020105;
-        public static final int overscroll_edge=0x7f020106;
-        public static final int overscroll_glow=0x7f020107;
-        public static final int panel_undo_holo=0x7f020108;
-        public static final int pano_direction_left_indicator=0x7f020109;
-        public static final int pano_direction_right_indicator=0x7f02010a;
-        public static final int photoeditor_actionbar_translucent=0x7f02010b;
-        public static final int photoeditor_actionbar_translucent_bottom=0x7f02010c;
-        public static final int photoeditor_artistic=0x7f02010d;
-        public static final int photoeditor_color=0x7f02010e;
-        public static final int photoeditor_effect_autofix=0x7f02010f;
-        public static final int photoeditor_effect_crop=0x7f020110;
-        public static final int photoeditor_effect_crossprocess=0x7f020111;
-        public static final int photoeditor_effect_documentary=0x7f020112;
-        public static final int photoeditor_effect_doodle=0x7f020113;
-        public static final int photoeditor_effect_duotone=0x7f020114;
-        public static final int photoeditor_effect_facelift=0x7f020115;
-        public static final int photoeditor_effect_facetan=0x7f020116;
-        public static final int photoeditor_effect_filllight=0x7f020117;
-        public static final int photoeditor_effect_fisheye=0x7f020118;
-        public static final int photoeditor_effect_flip=0x7f020119;
-        public static final int photoeditor_effect_grain=0x7f02011a;
-        public static final int photoeditor_effect_grayscale=0x7f02011b;
-        public static final int photoeditor_effect_highlight=0x7f02011c;
-        public static final int photoeditor_effect_lomoish=0x7f02011d;
-        public static final int photoeditor_effect_negative=0x7f02011e;
-        public static final int photoeditor_effect_posterize=0x7f02011f;
-        public static final int photoeditor_effect_redeye=0x7f020120;
-        public static final int photoeditor_effect_rotate=0x7f020121;
-        public static final int photoeditor_effect_saturation=0x7f020122;
-        public static final int photoeditor_effect_sepia=0x7f020123;
-        public static final int photoeditor_effect_shadow=0x7f020124;
-        public static final int photoeditor_effect_sharpen=0x7f020125;
-        public static final int photoeditor_effect_straighten=0x7f020126;
-        public static final int photoeditor_effect_temperature=0x7f020127;
-        public static final int photoeditor_effect_tint=0x7f020128;
-        public static final int photoeditor_effect_vignette=0x7f020129;
-        public static final int photoeditor_exposure=0x7f02012a;
-        public static final int photoeditor_fix=0x7f02012b;
-        public static final int photoeditor_redo=0x7f02012c;
-        public static final int photoeditor_scale_seekbar_color=0x7f02012d;
-        public static final int photoeditor_scale_seekbar_generic=0x7f02012e;
-        public static final int photoeditor_scale_seekbar_light=0x7f02012f;
-        public static final int photoeditor_scale_seekbar_shadow=0x7f020130;
-        public static final int photoeditor_seekbar_thumb=0x7f020131;
-        public static final int photoeditor_tab_selected_focused_holo=0x7f020132;
-        public static final int photoeditor_tab_selected_holo=0x7f020133;
-        public static final int photoeditor_tab_selected_pressed_holo=0x7f020134;
-        public static final int photoeditor_tab_unselected_focused_holo=0x7f020135;
-        public static final int photoeditor_tab_unselected_pressed_holo=0x7f020136;
-        public static final int photoeditor_toggle_button_background=0x7f020137;
-        public static final int photoeditor_undo=0x7f020138;
-        public static final int photopage_bottom_button_background=0x7f020139;
-        public static final int placeholder_camera=0x7f02013a;
-        public static final int placeholder_empty=0x7f02013b;
-        public static final int placeholder_locked=0x7f02013c;
-        public static final int popup_full_dark=0x7f02013d;
-        public static final int preview=0x7f02013e;
-        public static final int progress_bg_holo_dark=0x7f02013f;
-        public static final int progress_primary_holo_dark=0x7f020140;
-        public static final int progress_secondary_holo_dark=0x7f020141;
-        public static final int scrubber_knob=0x7f020142;
-        public static final int setting_picker=0x7f020143;
-        public static final int spinner_76_inner_holo=0x7f020144;
-        public static final int spinner_76_outer_holo=0x7f020145;
-        public static final int switch_bg_focused_holo_dark=0x7f020146;
-        public static final int switch_bg_holo_dark=0x7f020147;
-        public static final int switch_inner_holo_dark=0x7f020148;
-        public static final int switch_thumb_activated_holo_dark=0x7f020149;
-        public static final int switch_thumb_disabled_holo_dark=0x7f02014a;
-        public static final int switch_thumb_holo_dark=0x7f02014b;
-        public static final int switch_thumb_pressed_holo_dark=0x7f02014c;
-        public static final int switch_track_holo_dark=0x7f02014d;
-        public static final int switcher_bg=0x7f02014e;
-        public static final int text_select_handle_left=0x7f02014f;
-        public static final int text_select_handle_right=0x7f020150;
-        public static final int toast_frame_holo=0x7f020151;
-        public static final int transparent_button_background=0x7f020152;
-        public static final int wallpaper_picker_preview=0x7f020153;
+        public static final int btn_default_normal_holo_dark=0x7f02000c;
+        public static final int btn_default_pressed_holo_dark=0x7f02000d;
+        public static final int btn_make_offline_disabled_on_holo_dark=0x7f02000e;
+        public static final int btn_make_offline_normal_off_holo_dark=0x7f02000f;
+        public static final int btn_make_offline_normal_on_holo_dark=0x7f020010;
+        public static final int btn_new_shutter=0x7f020011;
+        public static final int btn_pan_shutter_pressed_holo=0x7f020012;
+        public static final int btn_pan_shutter_pressed_holo_large=0x7f020013;
+        public static final int btn_pan_shutter_pressed_holo_xlarge=0x7f020014;
+        public static final int btn_shutter_default=0x7f020015;
+        public static final int btn_shutter_pano_pressed=0x7f020016;
+        public static final int btn_shutter_pressed=0x7f020017;
+        public static final int btn_video_shutter_holo=0x7f020018;
+        public static final int btn_video_shutter_holo_large=0x7f020019;
+        public static final int btn_video_shutter_holo_xlarge=0x7f02001a;
+        public static final int btn_video_shutter_pressed_holo=0x7f02001b;
+        public static final int btn_video_shutter_pressed_holo_large=0x7f02001c;
+        public static final int btn_video_shutter_pressed_holo_xlarge=0x7f02001d;
+        public static final int cab_divider_vertical_dark=0x7f02001e;
+        public static final int camera_crop=0x7f02001f;
+        public static final int camera_crop_holo=0x7f020020;
+        public static final int dialog_full_holo_dark=0x7f020021;
+        public static final int dropdown_ic_arrow_normal_holo_dark=0x7f020022;
+        public static final int filtershow_background=0x7f020023;
+        public static final int filtershow_border_4x5=0x7f020024;
+        public static final int filtershow_border_black=0x7f020025;
+        public static final int filtershow_border_brush=0x7f020026;
+        public static final int filtershow_border_film=0x7f020027;
+        public static final int filtershow_border_grunge=0x7f020028;
+        public static final int filtershow_border_rounded_black=0x7f020029;
+        public static final int filtershow_border_rounded_white=0x7f02002a;
+        public static final int filtershow_border_sumi_e=0x7f02002b;
+        public static final int filtershow_border_tape=0x7f02002c;
+        public static final int filtershow_border_white=0x7f02002d;
+        public static final int filtershow_button_background=0x7f02002e;
+        public static final int filtershow_button_border=0x7f02002f;
+        public static final int filtershow_button_colors=0x7f020030;
+        public static final int filtershow_button_colors_contrast=0x7f020031;
+        public static final int filtershow_button_colors_curve=0x7f020032;
+        public static final int filtershow_button_colors_sharpen=0x7f020033;
+        public static final int filtershow_button_colors_vignette=0x7f020034;
+        public static final int filtershow_button_current=0x7f020035;
+        public static final int filtershow_button_fx=0x7f020036;
+        public static final int filtershow_button_geometry=0x7f020037;
+        public static final int filtershow_button_geometry_crop=0x7f020038;
+        public static final int filtershow_button_geometry_flip=0x7f020039;
+        public static final int filtershow_button_geometry_rotate=0x7f02003a;
+        public static final int filtershow_button_geometry_straighten=0x7f02003b;
+        public static final int filtershow_button_operations=0x7f02003c;
+        public static final int filtershow_button_origin=0x7f02003d;
+        public static final int filtershow_button_redo=0x7f02003e;
+        public static final int filtershow_button_selected_background=0x7f02003f;
+        public static final int filtershow_button_settings=0x7f020040;
+        public static final int filtershow_button_show_original=0x7f020041;
+        public static final int filtershow_button_undo=0x7f020042;
+        public static final int filtershow_fx_0000_vintage=0x7f020043;
+        public static final int filtershow_fx_0001_instant=0x7f020044;
+        public static final int filtershow_fx_0002_bleach=0x7f020045;
+        public static final int filtershow_fx_0003_blue_crush=0x7f020046;
+        public static final int filtershow_fx_0004_bw_contrast=0x7f020047;
+        public static final int filtershow_fx_0005_punch=0x7f020048;
+        public static final int filtershow_fx_0006_x_process=0x7f020049;
+        public static final int filtershow_fx_0007_washout=0x7f02004a;
+        public static final int filtershow_fx_0008_washout_color=0x7f02004b;
+        public static final int focus_box=0x7f02004c;
+        public static final int frame_overlay_gallery_camera=0x7f02004d;
+        public static final int frame_overlay_gallery_folder=0x7f02004e;
+        public static final int frame_overlay_gallery_picasa=0x7f02004f;
+        public static final int frame_overlay_gallery_ptp=0x7f020050;
+        public static final int grid_pressed=0x7f020051;
+        public static final int grid_selected=0x7f020052;
+        public static final int ic_360pano_holo_light=0x7f020053;
+        public static final int ic_btn_shutter_retake=0x7f020054;
+        public static final int ic_cameraalbum_overlay=0x7f020055;
+        public static final int ic_control_play=0x7f020056;
+        public static final int ic_effects_holo_light=0x7f020057;
+        public static final int ic_effects_holo_light_large=0x7f020058;
+        public static final int ic_effects_holo_light_xlarge=0x7f020059;
+        public static final int ic_exposure_0=0x7f02005a;
+        public static final int ic_exposure_holo_light=0x7f02005b;
+        public static final int ic_exposure_holo_light_large=0x7f02005c;
+        public static final int ic_exposure_holo_light_xlarge=0x7f02005d;
+        public static final int ic_exposure_n1=0x7f02005e;
+        public static final int ic_exposure_n2=0x7f02005f;
+        public static final int ic_exposure_n3=0x7f020060;
+        public static final int ic_exposure_p1=0x7f020061;
+        public static final int ic_exposure_p2=0x7f020062;
+        public static final int ic_exposure_p3=0x7f020063;
+        public static final int ic_flash_auto_holo_light=0x7f020064;
+        public static final int ic_flash_auto_holo_light_large=0x7f020065;
+        public static final int ic_flash_auto_holo_light_xlarge=0x7f020066;
+        public static final int ic_flash_off_holo_light=0x7f020067;
+        public static final int ic_flash_off_holo_light_large=0x7f020068;
+        public static final int ic_flash_off_holo_light_xlarge=0x7f020069;
+        public static final int ic_flash_on_holo_light=0x7f02006a;
+        public static final int ic_flash_on_holo_light_large=0x7f02006b;
+        public static final int ic_flash_on_holo_light_xlarge=0x7f02006c;
+        public static final int ic_flash_torch=0x7f02006d;
+        public static final int ic_gallery_play=0x7f02006e;
+        public static final int ic_gallery_play_big=0x7f02006f;
+        public static final int ic_hdr=0x7f020070;
+        public static final int ic_indicator_ev_0=0x7f020071;
+        public static final int ic_indicator_ev_n1=0x7f020072;
+        public static final int ic_indicator_ev_n2=0x7f020073;
+        public static final int ic_indicator_ev_n3=0x7f020074;
+        public static final int ic_indicator_ev_p1=0x7f020075;
+        public static final int ic_indicator_ev_p2=0x7f020076;
+        public static final int ic_indicator_ev_p3=0x7f020077;
+        public static final int ic_indicator_flash_auto=0x7f020078;
+        public static final int ic_indicator_flash_off=0x7f020079;
+        public static final int ic_indicator_flash_on=0x7f02007a;
+        public static final int ic_indicator_hdr_off=0x7f02007b;
+        public static final int ic_indicator_hdr_on=0x7f02007c;
+        public static final int ic_indicator_sce_off=0x7f02007d;
+        public static final int ic_indicator_sce_on=0x7f02007e;
+        public static final int ic_lockscreen_chevron_up=0x7f02007f;
+        public static final int ic_manage_pin=0x7f020080;
+        public static final int ic_menu_camera_holo_light=0x7f020081;
+        public static final int ic_menu_camera_video_view=0x7f020082;
+        public static final int ic_menu_cancel_holo_light=0x7f020083;
+        public static final int ic_menu_done_holo_light=0x7f020084;
+        public static final int ic_menu_info_details=0x7f020085;
+        public static final int ic_menu_make_offline=0x7f020086;
+        public static final int ic_menu_ptp_holo_light=0x7f020087;
+        public static final int ic_menu_revert_holo_dark=0x7f020088;
+        public static final int ic_menu_save_holo_light=0x7f020089;
+        public static final int ic_menu_savephoto=0x7f02008a;
+        public static final int ic_menu_share_holo_light=0x7f02008b;
+        public static final int ic_menu_slideshow_holo_light=0x7f02008c;
+        public static final int ic_menu_tiny_planet=0x7f02008d;
+        public static final int ic_menu_trash_holo_light=0x7f02008e;
+        public static final int ic_menuselect_camera_facing_back=0x7f02008f;
+        public static final int ic_menuselect_camera_facing_front=0x7f020090;
+        public static final int ic_menuselect_gps_off=0x7f020091;
+        public static final int ic_menuselect_gps_on=0x7f020092;
+        public static final int ic_pan_border_fast=0x7f020093;
+        public static final int ic_pan_border_fast_large=0x7f020094;
+        public static final int ic_pan_border_fast_xlarge=0x7f020095;
+        public static final int ic_pan_left_indicator=0x7f020096;
+        public static final int ic_pan_left_indicator_fast=0x7f020097;
+        public static final int ic_pan_left_indicator_fast_large=0x7f020098;
+        public static final int ic_pan_left_indicator_fast_xlarge=0x7f020099;
+        public static final int ic_pan_left_indicator_large=0x7f02009a;
+        public static final int ic_pan_left_indicator_xlarge=0x7f02009b;
+        public static final int ic_pan_progression=0x7f02009c;
+        public static final int ic_pan_progression_large=0x7f02009d;
+        public static final int ic_pan_progression_xlarge=0x7f02009e;
+        public static final int ic_pan_recording_indicator=0x7f02009f;
+        public static final int ic_pan_right_indicator=0x7f0200a0;
+        public static final int ic_pan_right_indicator_fast=0x7f0200a1;
+        public static final int ic_pan_right_indicator_fast_large=0x7f0200a2;
+        public static final int ic_pan_right_indicator_fast_xlarge=0x7f0200a3;
+        public static final int ic_pan_right_indicator_large=0x7f0200a4;
+        public static final int ic_pan_right_indicator_xlarge=0x7f0200a5;
+        public static final int ic_pan_thumb=0x7f0200a6;
+        public static final int ic_photoeditor_border=0x7f0200a7;
+        public static final int ic_photoeditor_color=0x7f0200a8;
+        public static final int ic_photoeditor_effects=0x7f0200a9;
+        public static final int ic_photoeditor_fix=0x7f0200aa;
+        public static final int ic_recording_indicator=0x7f0200ab;
+        public static final int ic_scn_holo_light=0x7f0200ac;
+        public static final int ic_scn_holo_light_large=0x7f0200ad;
+        public static final int ic_scn_holo_light_xlarge=0x7f0200ae;
+        public static final int ic_settings_holo_light=0x7f0200af;
+        public static final int ic_settings_holo_light_large=0x7f0200b0;
+        public static final int ic_settings_holo_light_xlarge=0x7f0200b1;
+        public static final int ic_snapshot_border=0x7f0200b2;
+        public static final int ic_snapshot_border_large=0x7f0200b3;
+        public static final int ic_snapshot_border_xlarge=0x7f0200b4;
+        public static final int ic_switch_camera=0x7f0200b5;
+        public static final int ic_switch_pan=0x7f0200b6;
+        public static final int ic_switch_pano_active=0x7f0200b7;
+        public static final int ic_switch_photo_facing_holo_light=0x7f0200b8;
+        public static final int ic_switch_photo_facing_holo_light_large=0x7f0200b9;
+        public static final int ic_switch_photo_facing_holo_light_xlarge=0x7f0200ba;
+        public static final int ic_switch_photosphere=0x7f0200bb;
+        public static final int ic_switch_video=0x7f0200bc;
+        public static final int ic_switch_video_active=0x7f0200bd;
+        public static final int ic_switch_video_facing_holo_light=0x7f0200be;
+        public static final int ic_switch_video_facing_holo_light_large=0x7f0200bf;
+        public static final int ic_switch_video_facing_holo_light_xlarge=0x7f0200c0;
+        public static final int ic_switcher_menu_indicator=0x7f0200c1;
+        public static final int ic_timelapse_none=0x7f0200c2;
+        public static final int ic_timelapse_none_large=0x7f0200c3;
+        public static final int ic_timelapse_none_xlarge=0x7f0200c4;
+        public static final int ic_vidcontrol_pause=0x7f0200c5;
+        public static final int ic_vidcontrol_play=0x7f0200c6;
+        public static final int ic_vidcontrol_reload=0x7f0200c7;
+        public static final int ic_video_effects_background_fields_of_wheat_holo=0x7f0200c8;
+        public static final int ic_video_effects_background_intergalactic_holo=0x7f0200c9;
+        public static final int ic_video_effects_background_normal_holo_dark=0x7f0200ca;
+        public static final int ic_video_effects_faces_big_eyes_holo_dark=0x7f0200cb;
+        public static final int ic_video_effects_faces_big_mouth_holo_dark=0x7f0200cc;
+        public static final int ic_video_effects_faces_big_nose_holo_dark=0x7f0200cd;
+        public static final int ic_video_effects_faces_small_eyes_holo_dark=0x7f0200ce;
+        public static final int ic_video_effects_faces_small_mouth_holo_dark=0x7f0200cf;
+        public static final int ic_video_effects_faces_squeeze_holo_dark=0x7f0200d0;
+        public static final int ic_video_thumb=0x7f0200d1;
+        public static final int ic_view_photosphere=0x7f0200d2;
+        public static final int ic_viewfinder_camera_facing_back=0x7f0200d3;
+        public static final int ic_viewfinder_camera_facing_front=0x7f0200d4;
+        public static final int ic_viewfinder_gps_no_signal=0x7f0200d5;
+        public static final int ic_viewfinder_gps_off=0x7f0200d6;
+        public static final int ic_viewfinder_gps_on=0x7f0200d7;
+        public static final int ic_wb_auto=0x7f0200d8;
+        public static final int ic_wb_cloudy=0x7f0200d9;
+        public static final int ic_wb_fluorescent=0x7f0200da;
+        public static final int ic_wb_incandescent=0x7f0200db;
+        public static final int ic_wb_sunlight=0x7f0200dc;
+        public static final int icn_media_pause=0x7f0200dd;
+        public static final int icn_media_pause_focused_holo_dark=0x7f0200de;
+        public static final int icn_media_pause_normal_holo_dark=0x7f0200df;
+        public static final int icn_media_pause_pressed_holo_dark=0x7f0200e0;
+        public static final int icn_media_play=0x7f0200e1;
+        public static final int icn_media_play_focused_holo_dark=0x7f0200e2;
+        public static final int icn_media_play_normal_holo_dark=0x7f0200e3;
+        public static final int icn_media_play_pressed_holo_dark=0x7f0200e4;
+        public static final int list_divider=0x7f0200e5;
+        public static final int list_divider_holo_dark=0x7f0200e6;
+        public static final int list_divider_large=0x7f0200e7;
+        public static final int list_pressed_holo_light=0x7f0200e8;
+        public static final int menu_dropdown_panel_holo_dark=0x7f0200e9;
+        public static final int on_screen_hint_frame=0x7f0200ea;
+        public static final int overscroll_edge=0x7f0200eb;
+        public static final int overscroll_glow=0x7f0200ec;
+        public static final int panel_undo_holo=0x7f0200ed;
+        public static final int pano_direction_left_indicator=0x7f0200ee;
+        public static final int pano_direction_right_indicator=0x7f0200ef;
+        public static final int photoeditor_actionbar_translucent=0x7f0200f0;
+        public static final int photoeditor_actionbar_translucent_bottom=0x7f0200f1;
+        public static final int photoeditor_artistic=0x7f0200f2;
+        public static final int photoeditor_color=0x7f0200f3;
+        public static final int photoeditor_exposure=0x7f0200f4;
+        public static final int photoeditor_fix=0x7f0200f5;
+        public static final int photoeditor_redo=0x7f0200f6;
+        public static final int photoeditor_seekbar_thumb=0x7f0200f7;
+        public static final int photoeditor_tab_selected_focused_holo=0x7f0200f8;
+        public static final int photoeditor_tab_selected_holo=0x7f0200f9;
+        public static final int photoeditor_tab_selected_pressed_holo=0x7f0200fa;
+        public static final int photoeditor_tab_unselected_focused_holo=0x7f0200fb;
+        public static final int photoeditor_tab_unselected_pressed_holo=0x7f0200fc;
+        public static final int photoeditor_toggle_button_background=0x7f0200fd;
+        public static final int photoeditor_undo=0x7f0200fe;
+        public static final int photopage_bottom_button_background=0x7f0200ff;
+        public static final int placeholder_camera=0x7f020100;
+        public static final int placeholder_empty=0x7f020101;
+        public static final int placeholder_locked=0x7f020102;
+        public static final int popup_full_dark=0x7f020103;
+        public static final int preview=0x7f020104;
+        public static final int progress_bg_holo_dark=0x7f020105;
+        public static final int progress_primary_holo_dark=0x7f020106;
+        public static final int progress_secondary_holo_dark=0x7f020107;
+        public static final int scrubber_knob=0x7f020108;
+        public static final int setting_picker=0x7f020109;
+        public static final int spinner_76_inner_holo=0x7f02010a;
+        public static final int spinner_76_outer_holo=0x7f02010b;
+        public static final int switch_bg_focused_holo_dark=0x7f02010c;
+        public static final int switch_bg_holo_dark=0x7f02010d;
+        public static final int switch_inner_holo_dark=0x7f02010e;
+        public static final int switch_thumb_activated_holo_dark=0x7f02010f;
+        public static final int switch_thumb_disabled_holo_dark=0x7f020110;
+        public static final int switch_thumb_holo_dark=0x7f020111;
+        public static final int switch_thumb_pressed_holo_dark=0x7f020112;
+        public static final int switch_track_holo_dark=0x7f020113;
+        public static final int text_select_handle_left=0x7f020114;
+        public static final int text_select_handle_right=0x7f020115;
+        public static final int toast_frame_holo=0x7f020116;
+        public static final int transparent_button_background=0x7f020117;
+        public static final int wallpaper_picker_preview=0x7f020118;
     }
     public static final class id {
-        public static final int action_bar=0x7f10008d;
-        public static final int action_bar_back=0x7f10007b;
-        public static final int action_bar_title=0x7f10007c;
-        public static final int action_camera=0x7f1000c3;
-        public static final int action_cancel=0x7f1000f6;
-        public static final int action_cluster_album=0x7f1000e4;
-        public static final int action_cluster_faces=0x7f1000e9;
-        public static final int action_cluster_location=0x7f1000e6;
-        public static final int action_cluster_size=0x7f1000e8;
-        public static final int action_cluster_tags=0x7f1000e7;
-        public static final int action_cluster_time=0x7f1000e5;
-        public static final int action_crop=0x7f1000f1;
-        public static final int action_delete=0x7f1000ed;
-        public static final int action_details=0x7f1000f3;
-        public static final int action_edit=0x7f1000ee;
-        public static final int action_filter_all=0x7f1000cc;
-        public static final int action_filter_image=0x7f1000cd;
-        public static final int action_filter_video=0x7f1000ce;
-        public static final int action_general_help=0x7f1000ca;
-        public static final int action_group_by=0x7f1000c6;
-        public static final int action_import=0x7f1000eb;
-        public static final int action_manage_offline=0x7f1000c7;
-        public static final int action_rotate_ccw=0x7f1000ef;
-        public static final int action_rotate_cw=0x7f1000f0;
-        public static final int action_select=0x7f1000c5;
+        public static final int action_camera=0x7f100030;
+        public static final int action_cancel=0x7f100057;
+        public static final int action_cluster_album=0x7f10004f;
+        public static final int action_cluster_faces=0x7f100054;
+        public static final int action_cluster_location=0x7f100051;
+        public static final int action_cluster_size=0x7f100053;
+        public static final int action_cluster_tags=0x7f100052;
+        public static final int action_cluster_time=0x7f100050;
+        public static final int action_filter_all=0x7f100037;
+        public static final int action_filter_image=0x7f100038;
+        public static final int action_filter_video=0x7f100039;
+        public static final int action_general_help=0x7f100035;
+        public static final int action_import=0x7f100056;
+        public static final int action_manage_offline=0x7f100032;
+        public static final int action_select=0x7f100031;
         public static final int action_select_all=0x7f100001;
-        public static final int action_setas=0x7f1000f2;
-        public static final int action_settings=0x7f1000c9;
-        public static final int action_share=0x7f1000ea;
-        public static final int action_share_panorama=0x7f1000ec;
-        public static final int action_show_on_map=0x7f1000f4;
-        public static final int action_slideshow=0x7f1000c4;
-        public static final int action_sync_picasa_albums=0x7f1000c8;
+        public static final int action_settings=0x7f100034;
+        public static final int action_share=0x7f100055;
+        public static final int action_slideshow=0x7f10002f;
+        public static final int action_sync_picasa_albums=0x7f100033;
         public static final int action_toggle_full_caching=0x7f100000;
-        public static final int action_trim=0x7f1000f5;
-        public static final int add_account=0x7f1000f7;
-        public static final int applyEffect=0x7f100035;
+        public static final int add_account=0x7f100058;
         public static final int appwidget_empty_view=0x7f100005;
         public static final int appwidget_loading_item=0x7f100004;
         public static final int appwidget_photo_item=0x7f100006;
         public static final int appwidget_stack_view=0x7f100007;
-        public static final int artistic_button=0x7f100086;
-        public static final int aspect=0x7f100033;
-        public static final int bg_replace_message=0x7f100009;
-        public static final int bg_replace_message_frame=0x7f100008;
-        public static final int blocker=0x7f100079;
-        public static final int borderButton=0x7f100050;
-        public static final int bordersList=0x7f100038;
-        public static final int btn_cancel=0x7f1000ad;
-        public static final int btn_done=0x7f1000ab;
-        public static final int btn_play=0x7f1000a9;
-        public static final int btn_retake=0x7f1000ac;
-        public static final int bwfilterButton=0x7f10004e;
-        public static final int camera_app_root=0x7f10006f;
-        public static final int camera_shutter_switcher=0x7f10000c;
-        public static final int camera_switcher=0x7f10000f;
-        public static final int cancel=0x7f100014;
-        public static final int capture_anim_view=0x7f1000a4;
-        public static final int clear_effects=0x7f100018;
-        public static final int color_button=0x7f100087;
-        public static final int colorsButton=0x7f100052;
-        public static final int colorsFxList=0x7f100041;
-        public static final int content=0x7f10000a;
-        public static final int contrastButton=0x7f100047;
-        public static final int controls=0x7f10000d;
-        public static final int cropButton=0x7f10003d;
-        public static final int crop_menu_1to1=0x7f1000d6;
-        public static final int crop_menu_3to4=0x7f1000d9;
-        public static final int crop_menu_4to3=0x7f1000d8;
-        public static final int crop_menu_4to6=0x7f1000d7;
-        public static final int crop_menu_5to7=0x7f1000da;
-        public static final int crop_menu_7to5=0x7f1000db;
-        public static final int crop_menu_9to16=0x7f1000dc;
-        public static final int crop_menu_none=0x7f1000dd;
-        public static final int crop_menu_original=0x7f1000de;
-        public static final int crop_popupmenu=0x7f1000d5;
-        public static final int current_setting=0x7f10005e;
-        public static final int curve_menu_blue=0x7f1000e3;
-        public static final int curve_menu_green=0x7f1000e2;
-        public static final int curve_menu_red=0x7f1000e1;
-        public static final int curve_menu_rgb=0x7f1000e0;
-        public static final int curvesButtonRGB=0x7f10004b;
-        public static final int curves_popupmenu=0x7f1000df;
-        public static final int done=0x7f100066;
-        public static final int duration=0x7f1000ba;
-        public static final int duration_unit=0x7f1000bb;
-        public static final int effect_background=0x7f10001f;
-        public static final int effect_background_separator=0x7f10001c;
-        public static final int effect_background_title=0x7f10001d;
-        public static final int effect_background_title_separator=0x7f10001e;
-        public static final int effect_label=0x7f100082;
-        public static final int effect_silly_faces=0x7f10001b;
-        public static final int effect_silly_faces_title=0x7f100019;
-        public static final int effect_silly_faces_title_separator=0x7f10001a;
-        public static final int effects_bar=0x7f10008b;
-        public static final int effects_menu=0x7f10008c;
-        public static final int exposureButton=0x7f100045;
-        public static final int exposure_button=0x7f100085;
-        public static final int face_view=0x7f1000a2;
-        public static final int face_view_stub=0x7f1000a1;
-        public static final int filterButtonsList=0x7f100032;
-        public static final int filterSeekBar=0x7f10002e;
-        public static final int filtersPanel=0x7f100030;
-        public static final int filtershow_done=0x7f100020;
-        public static final int fix_button=0x7f100088;
-        public static final int flipButton=0x7f10003f;
-        public static final int footer=0x7f100063;
-        public static final int frame=0x7f1000a0;
-        public static final int frame_layout=0x7f100096;
-        public static final int fxButton=0x7f10004f;
-        public static final int fxList=0x7f100036;
-        public static final int gallery_root=0x7f100061;
-        public static final int geometryButton=0x7f100051;
-        public static final int geometryList=0x7f10003a;
-        public static final int gl_root_cover=0x7f10005d;
-        public static final int gl_root_view=0x7f10005c;
-        public static final int header=0x7f100062;
-        public static final int historyPanel=0x7f100053;
-        public static final int hueButton=0x7f10004c;
-        public static final int image=0x7f100015;
-        public static final int imageBorder=0x7f10002b;
-        public static final int imageCrop=0x7f100027;
-        public static final int imageCurves=0x7f10002a;
-        public static final int imageFlip=0x7f100029;
-        public static final int imageRotate=0x7f100028;
-        public static final int imageShow=0x7f100025;
-        public static final int imageStateList=0x7f100023;
-        public static final int imageStatePanel=0x7f100022;
-        public static final int imageStraighten=0x7f100026;
-        public static final int imageTinyPlanet=0x7f10002d;
-        public static final int imageZoom=0x7f10002c;
-        public static final int imagestate_label=0x7f10005a;
-        public static final int imagestate_parameter=0x7f10005b;
-        public static final int labels=0x7f1000a7;
-        public static final int listBorders=0x7f100039;
-        public static final int listColorsFx=0x7f100042;
-        public static final int listFilters=0x7f100037;
-        public static final int listGeometry=0x7f10003b;
-        public static final int loading=0x7f10002f;
-        public static final int mainPanel=0x7f100024;
-        public static final int mainView=0x7f100021;
-        public static final int main_content=0x7f10000b;
-        public static final int menu=0x7f10007a;
-        public static final int menu_exposure_indicator=0x7f10006a;
-        public static final int menu_flash_indicator=0x7f100069;
-        public static final int menu_hdr_indicator=0x7f100068;
-        public static final int menu_scenemode_indicator=0x7f10006b;
-        public static final int menu_share=0x7f1000cf;
-        public static final int message=0x7f10006e;
-        public static final int movie_view_root=0x7f10006c;
+        public static final int cancel=0x7f10000c;
+        public static final int controls=0x7f10000f;
+        public static final int crop_menu_1to1=0x7f100041;
+        public static final int crop_menu_3to4=0x7f100044;
+        public static final int crop_menu_4to3=0x7f100043;
+        public static final int crop_menu_4to6=0x7f100042;
+        public static final int crop_menu_5to7=0x7f100045;
+        public static final int crop_menu_7to5=0x7f100046;
+        public static final int crop_menu_9to16=0x7f100047;
+        public static final int crop_menu_none=0x7f100048;
+        public static final int crop_menu_original=0x7f100049;
+        public static final int crop_popupmenu=0x7f100040;
+        public static final int curve_menu_blue=0x7f10004e;
+        public static final int curve_menu_green=0x7f10004d;
+        public static final int curve_menu_red=0x7f10004c;
+        public static final int curve_menu_rgb=0x7f10004b;
+        public static final int curves_popupmenu=0x7f10004a;
+        public static final int done=0x7f100015;
+        public static final int footer=0x7f100012;
+        public static final int gallery_root=0x7f100010;
+        public static final int gl_root_cover=0x7f10000e;
+        public static final int gl_root_view=0x7f10000d;
+        public static final int header=0x7f100011;
+        public static final int menu_exposure_indicator=0x7f100019;
+        public static final int menu_flash_indicator=0x7f100018;
+        public static final int menu_hdr_indicator=0x7f100017;
+        public static final int menu_scenemode_indicator=0x7f10001a;
+        public static final int menu_share=0x7f10003a;
+        public static final int movie_view_root=0x7f10001b;
         public static final int navigation_bar=0x7f100002;
-        public static final int on_screen_indicators=0x7f100067;
-        public static final int operationsButton=0x7f1000d3;
-        public static final int operationsList=0x7f100054;
-        public static final int pano_capture_indicator=0x7f100097;
-        public static final int pano_capture_too_fast_textview=0x7f10009e;
-        public static final int pano_capture_too_fast_textview_layout=0x7f10009d;
-        public static final int pano_layout=0x7f100077;
-        public static final int pano_pan_left_indicator=0x7f10009b;
-        public static final int pano_pan_progress_bar=0x7f10009a;
-        public static final int pano_pan_progress_bar_layout=0x7f100099;
-        public static final int pano_pan_right_indicator=0x7f10009c;
-        public static final int pano_preview_area=0x7f100098;
-        public static final int pano_review_cancel_button=0x7f100074;
-        public static final int pano_review_layout=0x7f100070;
-        public static final int pano_reviewarea=0x7f100071;
-        public static final int pano_rotate_reviewarea=0x7f100075;
-        public static final int pano_saving_progress_bar=0x7f100073;
-        public static final int pano_saving_progress_bar_layout=0x7f100072;
-        public static final int photo=0x7f100078;
-        public static final int photo_view=0x7f10008a;
-        public static final int photopage_bottom_control_edit=0x7f10008f;
-        public static final int photopage_bottom_control_panorama=0x7f100090;
-        public static final int photopage_bottom_control_tiny_planet=0x7f100091;
-        public static final int photopage_bottom_controls=0x7f10008e;
-        public static final int photopage_progress_background=0x7f100093;
-        public static final int photopage_progress_bar=0x7f100092;
-        public static final int photopage_progress_bar_text=0x7f100095;
-        public static final int photopage_progress_foreground=0x7f100094;
-        public static final int pickCurvesChannel=0x7f100034;
-        public static final int placeholder=0x7f10009f;
-        public static final int preview_border=0x7f1000a5;
-        public static final int preview_surface_view=0x7f1000aa;
-        public static final int progress=0x7f100065;
-        public static final int recording_time=0x7f1000c1;
-        public static final int recording_time_rect=0x7f1000a6;
-        public static final int redEyeButton=0x7f100040;
-        public static final int redoButton=0x7f1000d1;
-        public static final int redo_button=0x7f10007e;
-        public static final int render_overlay=0x7f1000a3;
-        public static final int resetHistoryButton=0x7f1000d2;
-        public static final int resetOperationsButton=0x7f100055;
-        public static final int review_image=0x7f1000a8;
-        public static final int rotateButton=0x7f10003e;
-        public static final int rotate_dialog_button1=0x7f1000b6;
-        public static final int rotate_dialog_button2=0x7f1000b5;
-        public static final int rotate_dialog_button_layout=0x7f1000b4;
-        public static final int rotate_dialog_layout=0x7f1000af;
-        public static final int rotate_dialog_root_layout=0x7f1000ae;
-        public static final int rotate_dialog_spinner=0x7f1000b2;
-        public static final int rotate_dialog_text=0x7f1000b3;
-        public static final int rotate_dialog_title=0x7f1000b1;
-        public static final int rotate_dialog_title_layout=0x7f1000b0;
-        public static final int rotate_toast=0x7f1000b7;
-        public static final int rowTextView=0x7f100058;
-        public static final int saturationButton=0x7f10004d;
-        public static final int save=0x7f1000cb;
-        public static final int saveOperationsButton=0x7f100056;
-        public static final int save_button=0x7f100080;
-        public static final int save_share_buttons=0x7f10007f;
-        public static final int scroll_view=0x7f100083;
-        public static final int secondRowPanel=0x7f100031;
-        public static final int selectedMark=0x7f100057;
+        public static final int on_screen_indicators=0x7f100016;
+        public static final int operationsButton=0x7f10003e;
+        public static final int pano_review_cancel_button=0x7f100021;
+        public static final int pano_review_layout=0x7f10001d;
+        public static final int pano_reviewarea=0x7f10001e;
+        public static final int pano_rotate_reviewarea=0x7f100022;
+        public static final int pano_saving_progress_bar=0x7f100020;
+        public static final int pano_saving_progress_bar_layout=0x7f10001f;
+        public static final int photo=0x7f100024;
+        public static final int photopage_bottom_control_edit=0x7f100026;
+        public static final int photopage_bottom_control_panorama=0x7f100027;
+        public static final int photopage_bottom_control_tiny_planet=0x7f100028;
+        public static final int photopage_bottom_controls=0x7f100025;
+        public static final int photopage_progress_background=0x7f10002a;
+        public static final int photopage_progress_bar=0x7f100029;
+        public static final int photopage_progress_bar_text=0x7f10002c;
+        public static final int photopage_progress_foreground=0x7f10002b;
+        public static final int progress=0x7f100014;
+        public static final int redoButton=0x7f10003c;
+        public static final int resetHistoryButton=0x7f10003d;
+        public static final int save=0x7f100036;
         public static final int selection_menu=0x7f100003;
-        public static final int set_time_interval_help_text=0x7f1000bd;
-        public static final int set_time_interval_title=0x7f1000b9;
-        public static final int settingList=0x7f100060;
-        public static final int setting_switch=0x7f10005f;
-        public static final int shadowRecoveryButton=0x7f100048;
-        public static final int share_button=0x7f100081;
-        public static final int sharpenButton=0x7f10004a;
-        public static final int showImageStateButton=0x7f1000d4;
-        public static final int shutter_button=0x7f10000e;
-        public static final int shutter_button_placeholder=0x7f100076;
-        public static final int start_trim=0x7f1000bf;
-        public static final int status=0x7f100064;
-        public static final int straightenButton=0x7f10003c;
-        public static final int surface_view=0x7f10006d;
-        public static final int text=0x7f100016;
-        public static final int time_interval_picker=0x7f1000b8;
-        public static final int time_lapse_interval_set_button=0x7f1000be;
-        public static final int time_lapse_label=0x7f1000c2;
-        public static final int time_lapse_switch=0x7f1000bc;
-        public static final int tinyplanetButton=0x7f100043;
-        public static final int title=0x7f100017;
-        public static final int toggles=0x7f100084;
-        public static final int toolbar=0x7f100089;
-        public static final int trim_view_root=0x7f1000c0;
-        public static final int typeMark=0x7f100059;
-        public static final int undoButton=0x7f1000d0;
-        public static final int undo_button=0x7f10007d;
-        public static final int vibranceButton=0x7f100049;
-        public static final int vignetteButton=0x7f100046;
-        public static final int wbalanceButton=0x7f100044;
-        public static final int widget_type=0x7f100010;
-        public static final int widget_type_album=0x7f100011;
-        public static final int widget_type_photo=0x7f100012;
-        public static final int widget_type_shuffle=0x7f100013;
+        public static final int showImageStateButton=0x7f10003f;
+        public static final int shutter_button_placeholder=0x7f100023;
+        public static final int start_trim=0x7f10002d;
+        public static final int status=0x7f100013;
+        public static final int surface_view=0x7f10001c;
+        public static final int trim_view_root=0x7f10002e;
+        public static final int undoButton=0x7f10003b;
+        public static final int widget_type=0x7f100008;
+        public static final int widget_type_album=0x7f100009;
+        public static final int widget_type_photo=0x7f10000a;
+        public static final int widget_type_shuffle=0x7f10000b;
     }
     public static final class integer {
         /**  configuration for album page 
@@ -997,73 +779,25 @@ containing a value of this type.
         public static final int appwidget_loading_item=0x7f040003;
         public static final int appwidget_main=0x7f040004;
         public static final int appwidget_photo_item=0x7f040005;
-        public static final int bg_replacement_training_message=0x7f040006;
-        public static final int camera_main=0x7f040007;
-        public static final int camera_shutter_switcher=0x7f040008;
-        public static final int choose_widget_type=0x7f040009;
-        public static final int cropimage=0x7f04000a;
-        public static final int details=0x7f04000b;
-        public static final int details_list=0x7f04000c;
-        public static final int dialog_picker=0x7f04000d;
-        public static final int effect_setting_item=0x7f04000e;
-        public static final int effect_setting_popup=0x7f04000f;
-        public static final int face_view=0x7f040010;
-        public static final int filtershow_actionbar=0x7f040011;
-        public static final int filtershow_activity=0x7f040012;
-        public static final int filtershow_history_operation_row=0x7f040013;
-        public static final int filtershow_imagestate_row=0x7f040014;
-        public static final int gl_root_group=0x7f040015;
-        public static final int in_line_setting_menu=0x7f040016;
-        public static final int in_line_setting_switch=0x7f040017;
-        public static final int keyguard_widget=0x7f040018;
-        public static final int list_pref_setting_popup=0x7f040019;
-        public static final int main=0x7f04001a;
-        public static final int manage_offline_bar=0x7f04001b;
-        public static final int menu_indicators=0x7f04001c;
-        public static final int menu_indicators_keyguard=0x7f04001d;
-        public static final int more_setting_popup=0x7f04001e;
-        public static final int movie_view=0x7f04001f;
-        public static final int on_screen_hint=0x7f040020;
-        public static final int pano_module_capture=0x7f040021;
-        public static final int pano_review=0x7f040022;
-        public static final int panorama_module=0x7f040023;
-        public static final int photo_frame=0x7f040024;
-        public static final int photo_module=0x7f040025;
-        public static final int photoeditor_actionbar=0x7f040026;
-        public static final int photoeditor_color_seekbar=0x7f040027;
-        public static final int photoeditor_crop_view=0x7f040028;
-        public static final int photoeditor_doodle_view=0x7f040029;
-        public static final int photoeditor_effect_tool_fullscreen=0x7f04002a;
-        public static final int photoeditor_effect_tool_panel=0x7f04002b;
-        public static final int photoeditor_effects_artistic=0x7f04002c;
-        public static final int photoeditor_effects_color=0x7f04002d;
-        public static final int photoeditor_effects_exposure=0x7f04002e;
-        public static final int photoeditor_effects_fix=0x7f04002f;
-        public static final int photoeditor_effects_gallery=0x7f040030;
-        public static final int photoeditor_effects_menu=0x7f040031;
-        public static final int photoeditor_flip_view=0x7f040032;
-        public static final int photoeditor_main=0x7f040033;
-        public static final int photoeditor_rotate_view=0x7f040034;
-        public static final int photoeditor_scale_seekbar=0x7f040035;
-        public static final int photoeditor_touch_view=0x7f040036;
-        public static final int photopage_bottom_controls=0x7f040037;
-        public static final int photopage_progress_bar=0x7f040038;
-        public static final int popup_list_item=0x7f040039;
-        public static final int preview_frame_pano=0x7f04003a;
-        public static final int preview_module_frame=0x7f04003b;
-        public static final int preview_module_frame_video=0x7f04003c;
-        public static final int preview_surface_view=0x7f04003d;
-        public static final int review_module_control=0x7f04003e;
-        public static final int rotate_dialog=0x7f04003f;
-        public static final int rotate_text_toast=0x7f040040;
-        public static final int setting_item=0x7f040041;
-        public static final int switcher_popup=0x7f040042;
-        public static final int time_interval_picker=0x7f040043;
-        public static final int time_interval_popup=0x7f040044;
-        public static final int trim_menu=0x7f040045;
-        public static final int trim_view=0x7f040046;
-        public static final int video_module=0x7f040047;
-        public static final int viewfinder_labels_video=0x7f040048;
+        public static final int choose_widget_type=0x7f040006;
+        public static final int cropimage=0x7f040007;
+        public static final int details=0x7f040008;
+        public static final int details_list=0x7f040009;
+        public static final int dialog_picker=0x7f04000a;
+        public static final int face_view=0x7f04000b;
+        public static final int gl_root_group=0x7f04000c;
+        public static final int keyguard_widget=0x7f04000d;
+        public static final int main=0x7f04000e;
+        public static final int manage_offline_bar=0x7f04000f;
+        public static final int menu_indicators_keyguard=0x7f040010;
+        public static final int movie_view=0x7f040011;
+        public static final int pano_review=0x7f040012;
+        public static final int photo_frame=0x7f040013;
+        public static final int photopage_bottom_controls=0x7f040014;
+        public static final int photopage_progress_bar=0x7f040015;
+        public static final int popup_list_item=0x7f040016;
+        public static final int trim_menu=0x7f040017;
+        public static final int trim_view=0x7f040018;
     }
     public static final class menu {
         public static final int album=0x7f120000;
@@ -2539,11 +2273,10 @@ CHAR LIMIT = NONE]
         public static final int Widget_Button_Borderless=0x7f0f0023;
     }
     public static final class xml {
-        public static final int camera_preferences=0x7f070000;
-        public static final int device_filter=0x7f070001;
-        public static final int video_preferences=0x7f070002;
-        public static final int wallpaper_picker_preview=0x7f070003;
-        public static final int widget_info=0x7f070004;
+        public static final int device_filter=0x7f070000;
+        public static final int video_preferences=0x7f070001;
+        public static final int wallpaper_picker_preview=0x7f070002;
+        public static final int widget_info=0x7f070003;
     }
     public static final class styleable {
         /** Attributes that can be used with a CameraPreference.
@@ -2570,7 +2303,7 @@ CHAR LIMIT = NONE]
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:title
+          @attr name com.zheng.gallery3d:title
         */
         public static final int CameraPreference_title = 0;
         /** Attributes that can be used with a CenteredLinearLayout.
@@ -2599,7 +2332,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:max_width
+          @attr name com.zheng.gallery3d:max_width
         */
         public static final int CenteredLinearLayout_max_width = 0;
         /** Attributes that can be used with a IconIndicator.
@@ -2624,7 +2357,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:icons
+          @attr name com.zheng.gallery3d:icons
         */
         public static final int IconIndicator_icons = 0;
         /**
@@ -2634,7 +2367,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:modes
+          @attr name com.zheng.gallery3d:modes
         */
         public static final int IconIndicator_modes = 1;
         /** Attributes that can be used with a IconListPreference.
@@ -2663,7 +2396,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:icons
+          @attr name com.zheng.gallery3d:icons
         */
         public static final int IconListPreference_icons = 0;
         /**
@@ -2673,7 +2406,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:images
+          @attr name com.zheng.gallery3d:images
         */
         public static final int IconListPreference_images = 3;
         /**
@@ -2683,7 +2416,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:largeIcons
+          @attr name com.zheng.gallery3d:largeIcons
         */
         public static final int IconListPreference_largeIcons = 2;
         /**
@@ -2695,7 +2428,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name android:singleIcon
+          @attr name com.zheng.gallery3d:singleIcon
         */
         public static final int IconListPreference_singleIcon = 1;
         /** Attributes that can be used with a ImageButtonTitle.
@@ -2704,8 +2437,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ImageButtonTitle_android_text com.zheng.gallery3d:android_text}</code></td><td></td></tr>
-           <tr><td><code>{@link #ImageButtonTitle_android_textColor com.zheng.gallery3d:android_textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ImageButtonTitle_android_text android:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #ImageButtonTitle_android_textColor android:textColor}</code></td><td></td></tr>
            </table>
            @see #ImageButtonTitle_android_text
            @see #ImageButtonTitle_android_textColor
@@ -2714,15 +2447,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x01010098, 0x0101014f
         };
         /**
-          <p>This symbol is the offset where the {@link com.zheng.gallery3d.R.attr#android_text}
+          <p>This symbol is the offset where the {@link android.R.attr#text}
           attribute's value can be found in the {@link #ImageButtonTitle} array.
-          @attr name android:android_text
+          @attr name android:text
         */
         public static final int ImageButtonTitle_android_text = 1;
         /**
-          <p>This symbol is the offset where the {@link com.zheng.gallery3d.R.attr#android_textColor}
+          <p>This symbol is the offset where the {@link android.R.attr#textColor}
           attribute's value can be found in the {@link #ImageButtonTitle} array.
-          @attr name android:android_textColor
+          @attr name android:textColor
         */
         public static final int ImageButtonTitle_android_textColor = 0;
         /** Attributes that can be used with a ListPreference.
@@ -2752,7 +2485,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-          @attr name android:defaultValue
+          @attr name com.zheng.gallery3d:defaultValue
         */
         public static final int ListPreference_defaultValue = 1;
         /**
@@ -2762,7 +2495,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:entries
+          @attr name com.zheng.gallery3d:entries
         */
         public static final int ListPreference_entries = 3;
         /**
@@ -2772,7 +2505,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:entryValues
+          @attr name com.zheng.gallery3d:entryValues
         */
         public static final int ListPreference_entryValues = 2;
         /**
@@ -2786,7 +2519,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:key
+          @attr name com.zheng.gallery3d:key
         */
         public static final int ListPreference_key = 0;
         /** Attributes that can be used with a Theme_GalleryBase.
@@ -2817,7 +2550,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:listPreferredItemHeightSmall
+          @attr name com.zheng.gallery3d:listPreferredItemHeightSmall
         */
         public static final int Theme_GalleryBase_listPreferredItemHeightSmall = 0;
         /**
@@ -2827,7 +2560,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:switchStyle
+          @attr name com.zheng.gallery3d:switchStyle
         */
         public static final int Theme_GalleryBase_switchStyle = 1;
     };

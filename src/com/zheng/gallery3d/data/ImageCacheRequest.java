@@ -18,6 +18,7 @@ package com.zheng.gallery3d.data;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 
 import com.zheng.gallery3d.app.GalleryApp;
 import com.zheng.gallery3d.common.BitmapUtils;

@@ -16,9 +16,16 @@
 
 package com.zheng.gallery3d.app;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
+
 import android.os.Handler;
 import android.os.Message;
 import android.os.Process;
+import android.util.Log;
 
 import com.zheng.gallery3d.common.Utils;
 import com.zheng.gallery3d.data.ContentListener;
@@ -27,12 +34,6 @@ import com.zheng.gallery3d.data.MediaObject;
 import com.zheng.gallery3d.data.MediaSet;
 import com.zheng.gallery3d.data.Path;
 import com.zheng.gallery3d.ui.SynchronizedHandler;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
 
 public class AlbumDataLoader {
     @SuppressWarnings("unused")

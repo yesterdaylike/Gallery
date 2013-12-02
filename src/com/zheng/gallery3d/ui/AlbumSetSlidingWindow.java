@@ -18,6 +18,7 @@ package com.zheng.gallery3d.ui;
 
 import android.graphics.Bitmap;
 import android.os.Message;
+import android.util.Log;
 
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.app.AbstractGalleryActivity;
@@ -85,7 +86,7 @@ public class AlbumSetSlidingWindow implements AlbumSetDataLoader.DataListener {
         public long setDataVersion;
         public long coverDataVersion;
         private BitmapLoader labelLoader;
-        private BitmapLoader coverLoader;
+        private BitmapLoader coverLoader; 
     }
 
     public AlbumSetSlidingWindow(AbstractGalleryActivity activity,

@@ -16,7 +16,6 @@
 
 package com.zheng.gallery3d.app;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import android.annotation.TargetApi;
@@ -27,7 +26,6 @@ import android.app.ActivityManager.RunningServiceInfo;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Rect;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -38,13 +36,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.zheng.camera.CameraActivity;
-import com.zheng.camera.ProxyLauncher;
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.common.ApiHelper;
 import com.zheng.gallery3d.data.ComboAlbum;
@@ -64,13 +61,10 @@ import com.zheng.gallery3d.data.SecureSource;
 import com.zheng.gallery3d.data.SnailAlbum;
 import com.zheng.gallery3d.data.SnailItem;
 import com.zheng.gallery3d.data.SnailSource;
-import com.zheng.gallery3d.filtershow.FilterShowActivity;
-import com.zheng.gallery3d.picasasource.PicasaSource;
 import com.zheng.gallery3d.ui.DetailsHelper;
 import com.zheng.gallery3d.ui.DetailsHelper.CloseListener;
 import com.zheng.gallery3d.ui.DetailsHelper.DetailsSource;
 import com.zheng.gallery3d.ui.GLView;
-import com.zheng.gallery3d.ui.ImportCompleteListener;
 import com.zheng.gallery3d.ui.MenuExecutor;
 import com.zheng.gallery3d.ui.PhotoView;
 import com.zheng.gallery3d.ui.SelectionManager;
@@ -79,7 +73,7 @@ import com.zheng.gallery3d.util.GalleryUtils;
 
 public class PhotoPage extends ActivityState implements
 PhotoView.Listener, AppBridge.Server,
-PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
+ GalleryActionBar.OnAlbumModeSelectedListener {
 	private static final String TAG = "PhotoPage";
 
 	private static final int MSG_HIDE_BARS = 1;
@@ -148,7 +142,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 	private GalleryActionBar mActionBar;
 	private boolean mIsMenuVisible;
 	private boolean mHaveImageEditor;
-	private PhotoPageBottomControls mBottomControls;
+	//private PhotoPageBottomControls mBottomControls;
 	private PhotoPageProgressBar mProgressBar;
 	private MediaItem mCurrentPhoto = null;
 	private MenuExecutor mMenuExecutor;
@@ -339,14 +333,14 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 					hideBars();
 					break;
 				}
-				case MSG_REFRESH_BOTTOM_CONTROLS: {
+				/*case MSG_REFRESH_BOTTOM_CONTROLS: {
 					if (mCurrentPhoto == message.obj && mBottomControls != null) {
 						mIsPanorama = message.arg1 == 1;
 						mIsPanorama360 = message.arg2 == 1;
 						mBottomControls.refresh();
 					}
 					break;
-				}
+				}*/
 				case MSG_ON_FULL_SCREEN_CHANGED: {
 					if (mAppBridge != null) {
 						mAppBridge.onFullScreenChanged(message.arg1 == 1);
@@ -553,10 +547,9 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 							if(mediaPlayer!=null){
 								mediaPlayer.reset();
 							}
-							mediaPlayer=MediaPlayer.create(mActivity, raws[mCurrentIndex%raws.length]);
-							//mediaPlayer=MediaPlayer.create(mActivity, R.raw.she);
+							/*mediaPlayer=MediaPlayer.create(mActivity, raws[mCurrentIndex%raws.length]);
 							mediaPlayer.setLooping(true);
-							mediaPlayer.start();
+							mediaPlayer.start();*/
 
 							if (mHasCameraScreennailOrPlaceholder) {
 								if (mCurrentIndex > 0) {
@@ -617,10 +610,10 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 
 				mPhotoView.setFilmMode(mStartInFilmstrip && mMediaSet.getMediaItemCount() > 1);
 				RelativeLayout galleryRoot = (RelativeLayout) ((Activity) mActivity)
-						.findViewById(mAppBridge != null ? R.id.content : R.id.gallery_root);
+						.findViewById(mAppBridge != null ? R.id.gallery_root : R.id.gallery_root);
 				if (galleryRoot != null) {
 					if (mSecureAlbum == null) {
-						mBottomControls = new PhotoPageBottomControls(this, mActivity, galleryRoot);
+						//mBottomControls = new PhotoPageBottomControls(this, mActivity, galleryRoot);
 					}
 					StitchingProgressManager progressManager = mApplication.getStitchingProgressManager();
 					if (progressManager != null) {
@@ -643,12 +636,12 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		mHandler.sendEmptyMessage(isCamera ? MSG_ON_CAMERA_CENTER : MSG_ON_PICTURE_CENTER);
 	}
 
-	@Override
+	/*@Override
 	public boolean canDisplayBottomControls() {
 		return mIsActive && !mPhotoView.canUndo();
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public boolean canDisplayBottomControl(int control) {
 		if (mCurrentPhoto == null) {
 			return false;
@@ -667,9 +660,9 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		default:
 			return false;
 		}
-	}
+	}*/
 
-	@Override
+/*	@Override
 	public void onBottomControlClicked(int control) {
 		switch(control) {
 		case R.id.photopage_bottom_control_edit:
@@ -685,7 +678,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		default:
 			return;
 		}
-	}
+	}*/
 
 	@TargetApi(ApiHelper.VERSION_CODES.JELLY_BEAN)
 	private void setupNfcBeamPush() {
@@ -729,7 +722,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 
 	private void launchTinyPlanet() {
 		// Deep link into tiny planet
-		MediaItem current = mModel.getMediaItem(0);
+		/*MediaItem current = mModel.getMediaItem(0);
 		Intent intent = new Intent(FilterShowActivity.TINY_PLANET_ACTION);
 		intent.setClass(mActivity, FilterShowActivity.class);
 		intent.setDataAndType(current.getContentUri(), current.getMimeType())
@@ -737,18 +730,18 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		intent.putExtra(FilterShowActivity.LAUNCH_FULLSCREEN,
 				mActivity.isFullscreen());
 		mActivity.startActivityForResult(intent, REQUEST_EDIT);
-		overrideTransitionToEditor();
+		overrideTransitionToEditor();*/
 	}
 
 	private void launchCamera() {
-		Intent intent = new Intent(mActivity, CameraActivity.class)
+		/*Intent intent = new Intent(mActivity, CameraActivity.class)
 		.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		mRecenterCameraOnResume = false;
-		mActivity.startActivity(intent);
+		mActivity.startActivity(intent);*/
 	}
 
 	private void launchPhotoEditor() {
-		MediaItem current = mModel.getMediaItem(0);
+		/*MediaItem current = mModel.getMediaItem(0);
 		if (current == null || (current.getSupportedOperations()
 				& MediaObject.SUPPORT_EDIT) == 0) {
 			return;
@@ -766,7 +759,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 				mActivity.isFullscreen());
 		((Activity) mActivity).startActivityForResult(Intent.createChooser(intent, null),
 				REQUEST_EDIT);
-		overrideTransitionToEditor();
+		overrideTransitionToEditor();*/
 	}
 
 	private void requestDeferredUpdate() {
@@ -789,7 +782,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		}
 
 		updateMenuOperations();
-		refreshBottomControlsWhenReady();
+		//refreshBottomControlsWhenReady();
 		if (mShowDetails) {
 			mDetailsHelper.reloadDetails();
 		}
@@ -869,7 +862,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		mActionBar.show();
 		mActivity.getGLRoot().setLightsOutMode(false);
 		refreshHidingMessage();
-		refreshBottomControlsWhenReady();
+		//refreshBottomControlsWhenReady();
 	}
 
 	private void hideBars() {
@@ -878,7 +871,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		mActionBar.hide();
 		mActivity.getGLRoot().setLightsOutMode(true);
 		mHandler.removeMessages(MSG_HIDE_BARS);
-		refreshBottomControlsWhenReady();
+		//refreshBottomControlsWhenReady();
 	}
 
 	private void refreshHidingMessage() {
@@ -1097,7 +1090,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 					SlideshowPage.class, REQUEST_SLIDESHOW, data);
 			return true;
 		}
-		case R.id.action_crop: {
+		/*case R.id.action_crop: {
 			Activity activity = mActivity;
 			Intent intent = new Intent(FilterShowActivity.CROP_ACTION);
 			intent.setClass(activity, FilterShowActivity.class);
@@ -1144,7 +1137,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 			mSelectionManager.toggle(path);
 			mMenuExecutor.onMenuClicked(item, confirmMsg,
 					new ImportCompleteListener(mActivity));
-			return true;
+			return true;*/
 		default :
 			return false;
 		}
@@ -1265,7 +1258,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		if (mDeletePath == null) return;
 		mSelectionManager.deSelectAll();
 		mSelectionManager.toggle(mDeletePath);
-		mMenuExecutor.onMenuClicked(R.id.action_delete, null, true, false);
+		//mMenuExecutor.onMenuClicked(R.id.action_delete, null, true, false);
 		mDeletePath = null;
 	}
 
@@ -1322,14 +1315,15 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 			mModel.setCurrentPhoto(path, mCurrentIndex);
 		}
 	}
-
+	public static final int RESULT_USER_CANCELED = -2;
 	@Override
 	protected void onStateResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == Activity.RESULT_CANCELED) {
 			// This is a reset, not a canceled
 			return;
 		}
-		if (resultCode == ProxyLauncher.RESULT_USER_CANCELED) {
+		//if (resultCode == ProxyLauncher.RESULT_USER_CANCELED) {
+		if (resultCode == RESULT_USER_CANCELED) {
 			// Unmap reset vs. canceled
 			resultCode = Activity.RESULT_CANCELED;
 		}
@@ -1380,7 +1374,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		mPhotoView.pause();
 		mHandler.removeMessages(MSG_HIDE_BARS);
 		mHandler.removeMessages(MSG_REFRESH_BOTTOM_CONTROLS);
-		refreshBottomControlsWhenReady();
+		//refreshBottomControlsWhenReady();
 		mActionBar.removeOnMenuVisibilityListener(mMenuVisibilityListener);
 		if (mShowSpinner) {
 			mActionBar.disableAlbumModeMenu(true);
@@ -1397,7 +1391,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 
 	@Override
 	public void onFilmModeChanged(boolean enabled) {
-		refreshBottomControlsWhenReady();
+		//refreshBottomControlsWhenReady();
 		if (mShowSpinner) {
 			if (enabled) {
 				mActionBar.enableAlbumModeMenu(
@@ -1465,7 +1459,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		mActionBar.setDisplayOptions(
 				((mSecureAlbum == null) && (mSetPathString != null)), false);
 		mActionBar.addOnMenuVisibilityListener(mMenuVisibilityListener);
-		refreshBottomControlsWhenReady();
+		//refreshBottomControlsWhenReady();
 		if (mShowSpinner && mPhotoView.getFilmMode()) {
 			mActionBar.enableAlbumModeMenu(
 					GalleryActionBar.ALBUM_FILMSTRIP_MODE_SELECTED, this);
@@ -1495,7 +1489,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 			mScreenNailItem = null;
 		}
 		mActivity.getGLRoot().setOrientationSource(null);
-		if (mBottomControls != null) mBottomControls.cleanup();
+		/*if (mBottomControls != null) mBottomControls.cleanup();*/
 
 		// Remove all pending messages.
 		mHandler.removeCallbacksAndMessages(null);
@@ -1533,7 +1527,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		}
 	}
 
-	@Override
+/*	@Override
 	public void refreshBottomControlsWhenReady() {
 		if (mBottomControls == null) {
 			return;
@@ -1544,7 +1538,7 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 		} else {
 			currentPhoto.getPanoramaSupport(mRefreshBottomControlsCallback);
 		}
-	}
+	}*/
 
 	private void updatePanoramaUI(boolean isPanorama360) {
 		Menu menu = mActionBar.getMenu();
@@ -1573,6 +1567,6 @@ PhotoPageBottomControls.Delegate, GalleryActionBar.OnAlbumModeSelectedListener {
 
 	@Override
 	public void onUndoBarVisibilityChanged(boolean visible) {
-		refreshBottomControlsWhenReady();
+		//refreshBottomControlsWhenReady();
 	}
 }

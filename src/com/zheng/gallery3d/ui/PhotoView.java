@@ -24,6 +24,7 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.os.Message;
 import android.util.FloatMath;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View.MeasureSpec;
 import android.view.animation.AccelerateInterpolator;

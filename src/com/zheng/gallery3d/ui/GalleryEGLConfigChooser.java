@@ -15,13 +15,14 @@
  */
 package com.zheng.gallery3d.ui;
 
-import android.opengl.GLSurfaceView.EGLConfigChooser;
-
-import com.zheng.gallery3d.common.ApiHelper;
-
 import javax.microedition.khronos.egl.EGL10;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.egl.EGLDisplay;
+
+import android.opengl.GLSurfaceView.EGLConfigChooser;
+import android.util.Log;
+
+import com.zheng.gallery3d.common.ApiHelper;
 
 /*
  * The code is copied/adapted from

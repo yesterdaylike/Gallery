@@ -16,23 +16,19 @@
 
 package com.zheng.gallery3d.app;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Random;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.MotionEvent;
-import android.widget.Toast;
 
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.common.Utils;
@@ -183,10 +179,9 @@ public class SlideshowPage extends ActivityState {
 		if(mediaPlayer!=null){
 			mediaPlayer.reset();
 		}
-		mediaPlayer=MediaPlayer.create(mActivity, PhotoPage.raws[mIndex%PhotoPage.raws.length]);
-		//mediaPlayer=MediaPlayer.create(mActivity, R.raw.she);
+		/*mediaPlayer=MediaPlayer.create(mActivity, PhotoPage.raws[mIndex%PhotoPage.raws.length]);
 		mediaPlayer.setLooping(true);
-			mediaPlayer.start();
+		mediaPlayer.start();*/
 		if(mIndex>PhotoPage.raws.length){
 			mIndex = 0;
 		}

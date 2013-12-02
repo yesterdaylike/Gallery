@@ -16,6 +16,8 @@
 
 package com.zheng.gallery3d.ui;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -26,24 +28,20 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.app.AbstractGalleryActivity;
-import com.zheng.gallery3d.app.CropImage;
 import com.zheng.gallery3d.common.Utils;
 import com.zheng.gallery3d.data.DataManager;
-import com.zheng.gallery3d.data.MediaItem;
 import com.zheng.gallery3d.data.MediaObject;
 import com.zheng.gallery3d.data.Path;
-import com.zheng.gallery3d.filtershow.FilterShowActivity;
 import com.zheng.gallery3d.util.Future;
 import com.zheng.gallery3d.util.GalleryUtils;
 import com.zheng.gallery3d.util.ThreadPool.Job;
 import com.zheng.gallery3d.util.ThreadPool.JobContext;
-
-import java.util.ArrayList;
 
 public class MenuExecutor {
     @SuppressWarnings("unused")
@@ -169,28 +167,28 @@ public class MenuExecutor {
         boolean supportInfo = (supported & MediaObject.SUPPORT_INFO) != 0;
         boolean supportImport = (supported & MediaObject.SUPPORT_IMPORT) != 0;
 
-        setMenuItemVisible(menu, R.id.action_delete, supportDelete);
-        setMenuItemVisible(menu, R.id.action_rotate_ccw, supportRotate);
-        setMenuItemVisible(menu, R.id.action_rotate_cw, supportRotate);
-        setMenuItemVisible(menu, R.id.action_crop, supportCrop);
-        setMenuItemVisible(menu, R.id.action_trim, supportTrim);
+        //setMenuItemVisible(menu, R.id.action_delete, supportDelete);
+        // setMenuItemVisible(menu, R.id.action_rotate_ccw, supportRotate);
+        // setMenuItemVisible(menu, R.id.action_rotate_cw, supportRotate);
+        //setMenuItemVisible(menu, R.id.action_crop, supportCrop);
+        //setMenuItemVisible(menu, R.id.action_trim, supportTrim);
         // Hide panorama until call to updateMenuForPanorama corrects it
-        setMenuItemVisible(menu, R.id.action_share_panorama, false);
-        setMenuItemVisible(menu, R.id.action_share, supportShare);
-        setMenuItemVisible(menu, R.id.action_setas, supportSetAs);
-        setMenuItemVisible(menu, R.id.action_show_on_map, supportShowOnMap);
-        setMenuItemVisible(menu, R.id.action_edit, supportEdit);
-        setMenuItemVisible(menu, R.id.action_details, supportInfo);
-        setMenuItemVisible(menu, R.id.action_import, supportImport);
+        //setMenuItemVisible(menu, R.id.action_share_panorama, false);
+        //setMenuItemVisible(menu, R.id.action_share, supportShare);
+        //setMenuItemVisible(menu, R.id.action_setas, supportSetAs);
+        //setMenuItemVisible(menu, R.id.action_show_on_map, supportShowOnMap);
+        //setMenuItemVisible(menu, R.id.action_edit, supportEdit);
+        //setMenuItemVisible(menu, R.id.action_details, supportInfo);
+        //setMenuItemVisible(menu, R.id.action_import, supportImport);
     }
 
     public static void updateMenuForPanorama(Menu menu, boolean shareAsPanorama360,
             boolean disablePanorama360Options) {
-        setMenuItemVisible(menu, R.id.action_share_panorama, shareAsPanorama360);
+        /*setMenuItemVisible(menu, R.id.action_share_panorama, shareAsPanorama360);
         if (disablePanorama360Options) {
             setMenuItemVisible(menu, R.id.action_rotate_ccw, false);
             setMenuItemVisible(menu, R.id.action_rotate_cw, false);
-        }
+        }*/
     }
 
     private static void setMenuItemVisible(Menu menu, int itemId, boolean visible) {
@@ -226,7 +224,7 @@ public class MenuExecutor {
                     mSelectionManager.selectAll();
                 }
                 return;
-            case R.id.action_crop: {
+            /*case R.id.action_crop: {
                 Intent intent = getIntentBySingleSelectedPath(FilterShowActivity.CROP_ACTION)
                         .setClass((Activity) mActivity, FilterShowActivity.class);
                 ((Activity) mActivity).startActivity(intent);
@@ -261,11 +259,11 @@ public class MenuExecutor {
                 break;
             case R.id.action_import:
                 title = R.string.Import;
-                break;
+                break;*/
             default:
                 return;
         }
-        startAction(action, title, listener, waitOnStop, showDialog);
+        //startAction(action, title, listener, waitOnStop, showDialog);
     }
 
     private class ConfirmDialogListener implements OnClickListener, OnCancelListener {
@@ -353,7 +351,7 @@ public class MenuExecutor {
         long startTime = System.currentTimeMillis();
 
         switch (cmd) {
-            case R.id.action_delete:
+            /*case R.id.action_delete:
                 manager.delete(path);
                 break;
             case R.id.action_rotate_cw:
@@ -361,7 +359,7 @@ public class MenuExecutor {
                 break;
             case R.id.action_rotate_ccw:
                 manager.rotate(path, -90);
-                break;
+                break;*/
             case R.id.action_toggle_full_caching: {
                 MediaObject obj = manager.getMediaObject(path);
                 int cacheFlag = obj.getCacheFlag();
@@ -373,7 +371,7 @@ public class MenuExecutor {
                 obj.cache(cacheFlag);
                 break;
             }
-            case R.id.action_show_on_map: {
+            /*case R.id.action_show_on_map: {
                 MediaItem item = (MediaItem) manager.getMediaObject(path);
                 double latlng[] = new double[2];
                 item.getLatLong(latlng);
@@ -386,7 +384,7 @@ public class MenuExecutor {
                 MediaObject obj = manager.getMediaObject(path);
                 result = obj.Import();
                 break;
-            }
+            }*/
             default:
                 throw new AssertionError();
         }

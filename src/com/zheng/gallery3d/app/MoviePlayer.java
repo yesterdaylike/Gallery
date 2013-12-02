@@ -16,6 +16,11 @@
 
 package com.zheng.gallery3d.app;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -32,6 +37,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -43,11 +49,6 @@ import com.zheng.gallery3d.common.ApiHelper;
 import com.zheng.gallery3d.common.BlobCache;
 import com.zheng.gallery3d.util.CacheManager;
 import com.zheng.gallery3d.util.GalleryUtils;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 
 public class MoviePlayer implements
         MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener,

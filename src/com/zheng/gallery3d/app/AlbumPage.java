@@ -26,6 +26,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -56,7 +57,6 @@ import com.zheng.gallery3d.ui.SlotView;
 import com.zheng.gallery3d.ui.SynchronizedHandler;
 import com.zheng.gallery3d.util.Future;
 import com.zheng.gallery3d.util.GalleryUtils;
-import com.zheng.gallery3d.util.MediaSetUtils;
 
 public class AlbumPage extends ActivityState implements GalleryActionBar.ClusterRunner,
         SelectionManager.SelectionListener, MediaSet.SyncListener, GalleryActionBar.OnAlbumModeSelectedListener {
@@ -133,6 +133,7 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
             int end = mSlotView.getVisibleEnd();
             for (int i = start; i < end; ++i) {
                 MediaItem item = mAlbumDataAdapter.get(i);
+                Log.i("getItemIndex", item.getFilePath()+","+item.getPath().toString());
                 if (item != null && item.getPath() == path) return i;
             }
             return -1;
@@ -559,10 +560,10 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
 
             FilterUtils.setupMenuItems(actionBar, mMediaSetPath, true);
 
-            menu.findItem(R.id.action_group_by).setVisible(mShowClusterMenu);
+            /*menu.findItem(R.id.action_group_by).setVisible(mShowClusterMenu);
             menu.findItem(R.id.action_camera).setVisible(
                     MediaSetUtils.isCameraSource(mMediaSetPath)
-                    && GalleryUtils.isCameraAvailable(mActivity));
+                    && GalleryUtils.isCameraAvailable(mActivity));*/
 
         }
         actionBar.setSubtitle(null);
@@ -593,7 +594,7 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
     @Override
     protected boolean onItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home: {
+            /*case android.R.id.home: {
                 onUpPressed();
                 return true;
             }
@@ -607,7 +608,7 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
             case R.id.action_group_by: {
                 mActivity.getGalleryActionBar().showClusterDialog(this);
                 return true;
-            }
+            }*/
             case R.id.action_slideshow: {
                 mInCameraAndWantQuitOnPause = false;
                 Bundle data = new Bundle();
@@ -618,7 +619,7 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
                         SlideshowPage.class, REQUEST_SLIDESHOW, data);
                 return true;
             }
-            case R.id.action_details: {
+            /*case R.id.action_details: {
                 if (mShowDetails) {
                     hideDetails();
                 } else {
@@ -629,7 +630,7 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
             case R.id.action_camera: {
                 GalleryUtils.startCameraActivity(mActivity);
                 return true;
-            }
+            }*/
             default:
                 return false;
         }

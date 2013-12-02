@@ -19,6 +19,8 @@ package com.zheng.gallery3d.ui;
 import javax.microedition.khronos.opengles.GL11;
 import javax.microedition.khronos.opengles.GL11Ext;
 
+import android.util.Log;
+
 public class RawTexture extends BasicTexture {
     private static final String TAG = "RawTexture";
 

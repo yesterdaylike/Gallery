@@ -16,11 +16,13 @@
 
 package com.zheng.gallery3d.data;
 
-import com.zheng.gallery3d.common.Utils;
-import com.zheng.gallery3d.util.IdentityCache;
-
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+
+import android.util.Log;
+
+import com.zheng.gallery3d.common.Utils;
+import com.zheng.gallery3d.util.IdentityCache;
 
 public class Path {
     private static final String TAG = "Path";

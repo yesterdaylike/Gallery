@@ -16,10 +16,6 @@
 
 package com.zheng.gallery3d.data;
 
-import com.zheng.gallery3d.common.Utils;
-import com.zheng.gallery3d.util.ThreadPool.CancelListener;
-import com.zheng.gallery3d.util.ThreadPool.JobContext;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -27,6 +23,12 @@ import java.io.InputStream;
 import java.io.InterruptedIOException;
 import java.io.OutputStream;
 import java.net.URL;
+
+import android.util.Log;
+
+import com.zheng.gallery3d.common.Utils;
+import com.zheng.gallery3d.util.ThreadPool.CancelListener;
+import com.zheng.gallery3d.util.ThreadPool.JobContext;
 
 public class DownloadUtils {
     private static final String TAG = "DownloadService";

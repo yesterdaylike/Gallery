@@ -16,19 +16,20 @@
 
 package com.zheng.gallery3d.data;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 import android.content.ContentProviderClient;
 import android.content.ContentUris;
 import android.content.UriMatcher;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.util.Log;
 
 import com.zheng.gallery3d.app.Gallery;
 import com.zheng.gallery3d.app.GalleryApp;
 import com.zheng.gallery3d.data.MediaSet.ItemConsumer;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 class LocalSource extends MediaSource {
 

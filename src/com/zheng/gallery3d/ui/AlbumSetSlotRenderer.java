@@ -19,7 +19,6 @@ package com.zheng.gallery3d.ui;
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.app.AbstractGalleryActivity;
 import com.zheng.gallery3d.app.AlbumSetDataLoader;
-import com.zheng.gallery3d.data.MediaObject;
 import com.zheng.gallery3d.data.Path;
 import com.zheng.gallery3d.ui.AlbumSetSlidingWindow.AlbumSetEntry;
 

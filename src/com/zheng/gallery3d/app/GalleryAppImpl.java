@@ -16,14 +16,17 @@
 
 package com.zheng.gallery3d.app;
 
-import android.app.Application;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.os.AsyncTask;
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import com.zheng.gallery3d.app.StitchingProgressManager;
-import com.zheng.gallery3d.common.ApiHelper;
+import android.app.Application;
+import android.content.Context;
+import android.os.AsyncTask;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
+
+import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.data.DataManager;
 import com.zheng.gallery3d.data.DownloadCache;
 import com.zheng.gallery3d.data.ImageCacheService;
@@ -33,95 +36,136 @@ import com.zheng.gallery3d.util.GalleryUtils;
 import com.zheng.gallery3d.util.LightCycleHelper;
 import com.zheng.gallery3d.util.ThreadPool;
 
-import java.io.File;
-
 public class GalleryAppImpl extends Application implements GalleryApp {
 
-    private static final String DOWNLOAD_FOLDER = "download";
-    private static final long DOWNLOAD_CAPACITY = 64 * 1024 * 1024; // 64M
+	private static final String DOWNLOAD_FOLDER = "download";
+	private static final long DOWNLOAD_CAPACITY = 64 * 1024 * 1024; // 64M
 
-    private ImageCacheService mImageCacheService;
-    private Object mLock = new Object();
-    private DataManager mDataManager;
-    private ThreadPool mThreadPool;
-    private DownloadCache mDownloadCache;
-    private StitchingProgressManager mStitchingProgressManager;
+	private ImageCacheService mImageCacheService;
+	private Object mLock = new Object();
+	private DataManager mDataManager;
+	private ThreadPool mThreadPool;
+	private DownloadCache mDownloadCache;
+	private StitchingProgressManager mStitchingProgressManager;
+    private static float sPixelDensity = 1;
+    private static ImageFileNamer sImageFileNamer;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        com.zheng.camera.Util.initialize(this);
-        initializeAsyncTask();
-        GalleryUtils.initialize(this);
-        WidgetUtils.initialize(this);
-        PicasaSource.initialize(this);
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		initialize(this);
+		initializeAsyncTask();
+		GalleryUtils.initialize(this);
+		WidgetUtils.initialize(this);
+		PicasaSource.initialize(this);
 
-        mStitchingProgressManager = LightCycleHelper.createStitchingManagerInstance(this);
-        if (mStitchingProgressManager != null) {
-            mStitchingProgressManager.addChangeListener(getDataManager());
-        }
-    }
+		mStitchingProgressManager = LightCycleHelper.createStitchingManagerInstance(this);
+		if (mStitchingProgressManager != null) {
+			mStitchingProgressManager.addChangeListener(getDataManager());
+		}
+	}
 
-    @Override
-    public Context getAndroidContext() {
-        return this;
-    }
+	public static void initialize(Context context) {
+		DisplayMetrics metrics = new DisplayMetrics();
+		WindowManager wm = (WindowManager)
+				context.getSystemService(Context.WINDOW_SERVICE);
+		wm.getDefaultDisplay().getMetrics(metrics);
+		sPixelDensity = metrics.density;
+		sImageFileNamer = new ImageFileNamer(
+				context.getString(R.string.image_file_name_format));
+	}
 
-    @Override
-    public synchronized DataManager getDataManager() {
-        if (mDataManager == null) {
-            mDataManager = new DataManager(this);
-            mDataManager.initializeSourceMap();
-        }
-        return mDataManager;
-    }
+	private static class ImageFileNamer {
+		private SimpleDateFormat mFormat;
 
-    @Override
-    public StitchingProgressManager getStitchingProgressManager() {
-        return mStitchingProgressManager;
-    }
+		// The date (in milliseconds) used to generate the last name.
+		private long mLastDate;
 
-    @Override
-    public ImageCacheService getImageCacheService() {
-        // This method may block on file I/O so a dedicated lock is needed here.
-        synchronized (mLock) {
-            if (mImageCacheService == null) {
-                mImageCacheService = new ImageCacheService(getAndroidContext());
-            }
-            return mImageCacheService;
-        }
-    }
+		// Number of names generated for the same second.
+		private int mSameSecondCount;
 
-    @Override
-    public synchronized ThreadPool getThreadPool() {
-        if (mThreadPool == null) {
-            mThreadPool = new ThreadPool();
-        }
-        return mThreadPool;
-    }
+		public ImageFileNamer(String format) {
+			mFormat = new SimpleDateFormat(format);
+		}
 
-    @Override
-    public synchronized DownloadCache getDownloadCache() {
-        if (mDownloadCache == null) {
-            File cacheDir = new File(getExternalCacheDir(), DOWNLOAD_FOLDER);
+		public String generateName(long dateTaken) {
+			Date date = new Date(dateTaken);
+			String result = mFormat.format(date);
 
-            if (!cacheDir.isDirectory()) cacheDir.mkdirs();
+			// If the last name was generated for the same second,
+			// we append _1, _2, etc to the name.
+			if (dateTaken / 1000 == mLastDate / 1000) {
+				mSameSecondCount++;
+				result += "_" + mSameSecondCount;
+			} else {
+				mLastDate = dateTaken;
+				mSameSecondCount = 0;
+			}
 
-            if (!cacheDir.isDirectory()) {
-                throw new RuntimeException(
-                        "fail to create: " + cacheDir.getAbsolutePath());
-            }
-            mDownloadCache = new DownloadCache(this, cacheDir, DOWNLOAD_CAPACITY);
-        }
-        return mDownloadCache;
-    }
+			return result;
+		}
+	}
 
-    private void initializeAsyncTask() {
-        // AsyncTask class needs to be loaded in UI thread.
-        // So we load it here to comply the rule.
-        try {
-            Class.forName(AsyncTask.class.getName());
-        } catch (ClassNotFoundException e) {
-        }
-    }
+	@Override
+	public Context getAndroidContext() {
+		return this;
+	}
+
+	@Override
+	public synchronized DataManager getDataManager() {
+		if (mDataManager == null) {
+			mDataManager = new DataManager(this);
+			mDataManager.initializeSourceMap();
+		}
+		return mDataManager;
+	}
+
+	@Override
+	public StitchingProgressManager getStitchingProgressManager() {
+		return mStitchingProgressManager;
+	}
+
+	@Override
+	public ImageCacheService getImageCacheService() {
+		// This method may block on file I/O so a dedicated lock is needed here.
+		synchronized (mLock) {
+			if (mImageCacheService == null) {
+				mImageCacheService = new ImageCacheService(getAndroidContext());
+			}
+			return mImageCacheService;
+		}
+	}
+
+	@Override
+	public synchronized ThreadPool getThreadPool() {
+		if (mThreadPool == null) {
+			mThreadPool = new ThreadPool();
+		}
+		return mThreadPool;
+	}
+
+	@Override
+	public synchronized DownloadCache getDownloadCache() {
+		if (mDownloadCache == null) {
+			File cacheDir = new File(getExternalCacheDir(), DOWNLOAD_FOLDER);
+
+			if (!cacheDir.isDirectory()) cacheDir.mkdirs();
+
+			if (!cacheDir.isDirectory()) {
+				throw new RuntimeException(
+						"fail to create: " + cacheDir.getAbsolutePath());
+			}
+			mDownloadCache = new DownloadCache(this, cacheDir, DOWNLOAD_CAPACITY);
+		}
+		return mDownloadCache;
+	}
+
+	private void initializeAsyncTask() {
+		// AsyncTask class needs to be loaded in UI thread.
+		// So we load it here to comply the rule.
+		try {
+			Class.forName(AsyncTask.class.getName());
+		} catch (ClassNotFoundException e) {
+		}
+	}
 }

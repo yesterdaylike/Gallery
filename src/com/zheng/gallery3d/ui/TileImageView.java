@@ -16,6 +16,10 @@
 
 package com.zheng.gallery3d.ui;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
@@ -29,9 +33,9 @@ import android.os.Message;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.ImageColumns;
 import android.util.FloatMath;
+import android.util.Log;
 
 import com.zheng.gallery3d.app.GalleryContext;
-import com.zheng.gallery3d.app.Log;
 import com.zheng.gallery3d.app.PhotoPage;
 import com.zheng.gallery3d.common.ApiHelper;
 import com.zheng.gallery3d.common.LongSparseArray;
@@ -48,10 +52,6 @@ import com.zheng.gallery3d.util.ThreadPool.CancelListener;
 import com.zheng.gallery3d.util.ThreadPool.JobContext;
 import com.zheng.gif.GifTextrue;
 import com.zheng.gif.GifTextrueFactory;
-
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class TileImageView extends GLView {
     public static final int SIZE_UNKNOWN = -1;

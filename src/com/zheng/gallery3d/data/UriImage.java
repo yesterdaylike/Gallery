@@ -16,6 +16,12 @@
 
 package com.zheng.gallery3d.data;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URL;
+
 import android.content.ContentResolver;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -23,6 +29,7 @@ import android.graphics.BitmapFactory.Options;
 import android.graphics.BitmapRegionDecoder;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
+import android.util.Log;
 
 import com.zheng.gallery3d.app.GalleryApp;
 import com.zheng.gallery3d.app.PanoramaMetadataSupport;
@@ -31,12 +38,6 @@ import com.zheng.gallery3d.common.Utils;
 import com.zheng.gallery3d.util.ThreadPool.CancelListener;
 import com.zheng.gallery3d.util.ThreadPool.Job;
 import com.zheng.gallery3d.util.ThreadPool.JobContext;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.net.URI;
-import java.net.URL;
 
 public class UriImage extends MediaItem {
     private static final String TAG = "UriImage";

@@ -17,6 +17,7 @@
 package com.zheng.gallery3d.data;
 
 import android.net.Uri;
+import android.util.Log;
 
 public abstract class MediaObject {
     @SuppressWarnings("unused")

@@ -16,18 +16,19 @@
 
 package com.zheng.gallery3d.app;
 
+import java.util.Stack;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.zheng.gallery3d.anim.StateTransitionAnimation;
 import com.zheng.gallery3d.common.Utils;
-
-import java.util.Stack;
 
 public class StateManager {
     @SuppressWarnings("unused")

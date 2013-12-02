@@ -16,6 +16,17 @@
 
 package com.zheng.gallery3d.app;
 
+import java.io.Closeable;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.ByteOrder;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.ProgressDialog;
@@ -40,13 +51,13 @@ import android.os.Message;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
 import android.util.FloatMath;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.zheng.camera.Util;
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.common.ApiHelper;
 import com.zheng.gallery3d.common.BitmapUtils;
@@ -75,16 +86,6 @@ import com.zheng.gallery3d.util.InterruptableOutputStream;
 import com.zheng.gallery3d.util.ThreadPool.CancelListener;
 import com.zheng.gallery3d.util.ThreadPool.Job;
 import com.zheng.gallery3d.util.ThreadPool.JobContext;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.nio.ByteOrder;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * The activity can crop specific region of interest from an image.
@@ -402,7 +403,16 @@ public class CropImage extends AbstractGalleryActivity {
             Log.w(TAG, "Cannot read EXIF data", t);
             return null;
         } finally {
-            Util.closeSilently(is);
+            closeSilently(is);
+        }
+    }
+    
+    public static void closeSilently(Closeable c) {
+        if (c == null) return;
+        try {
+            c.close();
+        } catch (Throwable t) {
+            // do nothing
         }
     }
 

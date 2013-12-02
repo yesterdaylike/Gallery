@@ -10,7 +10,5 @@ package com.zheng.gallery3d;
 public final class Manifest {
     public static final class permission {
         public static final String GALLERY_PROVIDER="com.zheng.gallery3d.permission.GALLERY_PROVIDER";
-        public static final String READ="com.zheng.gallery3d.filtershow.permission.READ";
-        public static final String WRITE="com.zheng.gallery3d.filtershow.permission.WRITE";
     }
 }
