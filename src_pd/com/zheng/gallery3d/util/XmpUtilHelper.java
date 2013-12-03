@@ -13,5 +13,4 @@ public class XmpUtilHelper {
     public static boolean writeXMPMeta(String filename, Object meta) {
         return false;
     }
-
 }

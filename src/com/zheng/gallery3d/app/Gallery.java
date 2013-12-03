@@ -61,6 +61,7 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 	// declare the dialog as a member field of your activity
 	private ProgressDialog mProgressDialog;
 	private String localVersion;
+	private String uri_version = "https://dl.dropboxusercontent.com/s/pmdlhgpn3g9tda4/version.txt?dl=1&token_hash=AAF7OIIyirM7C43bN875YWWwDM7SGZZ3VTuP3oPgYuls2w";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +100,7 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 		SharedPreferences settings = getSharedPreferences(CURRENT_VERSION, 0);
 		return settings.getString(CURRENT_VERSION, "Aversion1.0");
 	}
-	
+
 	/**更新版本号*/
 	private boolean updateVersion(String updateVersion){
 		SharedPreferences settings = getSharedPreferences(CURRENT_VERSION, 0);
@@ -173,7 +174,7 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 		// execute this when the downloader must be fired
 		final DownloadTask downloadTask = new DownloadTask(this);
 		//downloadTask.execute("https://dl.dropboxusercontent.com/s/co7rf23ryvay2hq/qqjietu.zip?dl=1&token_hash=AAEQLW8vRIcWeI6efV9TLz-1H-jGhQkIJ7sRPLbG4AxkkQ");
-		downloadTask.execute("https://dl.dropboxusercontent.com/s/4zf4ac7zddr8m97/version.txt?dl=1&token_hash=AAFyVneNP4qdWnya94zEIVZKUVt0JFu5F4vIqmP7t6ipmA");
+		downloadTask.execute(uri_version);
 
 		mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
 			@Override
@@ -189,7 +190,7 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 		private Context context;
 		private String updateVersion;
 		private String spec;
-		
+
 		public DownloadTask(Context context) {
 			this.context = context;
 		}
@@ -226,16 +227,18 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 					input = connection.getInputStream();
 					String[] versionUris = getStringArray(input);
 					if (input != null){input.close();}
-					
+
 					for (int i=0; i<versionUris.length; i++) {
 						updateVersion = versionUris[i++];
+						Log.i(TAG,"updateVersion: "+updateVersion);
 						if(updateVersion.compareTo(localVersion)>0){
 							spec = versionUris[i];
+							Log.i(TAG,"spec: "+spec);
 						}
 						else{
 							continue;
 						}
-						
+
 						url = new URL(spec);
 						connection = (HttpURLConnection) url.openConnection();
 						connection.connect();
@@ -245,17 +248,16 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 						if (connection.getResponseCode() != HttpURLConnection.HTTP_OK)
 							return "Server returned HTTP " + connection.getResponseCode() 
 									+ " " + connection.getResponseMessage();
-
+						Log.i(TAG,"fileLength:"+fileLength);
 						// this will be useful to display download percentage
 						// might be -1: server did not report the length
 						fileLength = connection.getContentLength();
 
-						// download the file
 						input = connection.getInputStream();
-						//getStringArray(input);
-
+						Log.i(TAG,"before output:"+galleryDirectory+"  "+updateVersion+".zip");
+						isExist(galleryDirectory);
 						output = new FileOutputStream(galleryDirectory+updateVersion+".zip");
-
+						Log.i(TAG,"output:"+galleryDirectory+updateVersion+".zip");
 						byte data[] = new byte[4096];
 						long total = 0;
 						int count;
@@ -269,11 +271,15 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 								publishProgress((int) (total * 100 / fileLength));
 							output.write(data, 0, count);
 						}
+						Log.i(TAG,"updateVersion before");
 						updateVersion(updateVersion);
+						Log.i(TAG,"unpackZip before");
 						unpackZip(galleryDirectory, updateVersion+".zip");
+						Log.i(TAG,"folderScan before");
 						folderScan(galleryDirectory + updateVersion);
 					}
 				} catch (Exception e) {
+					Log.i(TAG,"Exception");
 					return e.toString();
 				} finally {
 					try {
@@ -290,9 +296,17 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 			} finally {
 				wl.release();
 			}
-
 			return null;
 		}
+
+		public void isExist(String path){
+			File file = new File(path);
+			//判断文件夹是否存在,如果不存在则创建文件夹
+			if (!file.exists()) {
+				file.mkdir();
+			}
+		}
+
 
 		public String[] getStringArray(InputStream inputStream) {
 			InputStreamReader inputStreamReader = null;  
@@ -307,12 +321,13 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 			try {  
 				while ((line = reader.readLine()) != null) {
 					sb.append(line);
+					Log.i(TAG,"line: "+line);
 					sb.append("\n");
 				}  
 			} catch (IOException e) {
 				e.printStackTrace();
 			}  
-			
+
 			return sb.toString().split("\n");
 		}
 
