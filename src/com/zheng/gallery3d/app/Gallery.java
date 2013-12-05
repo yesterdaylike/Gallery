@@ -86,7 +86,7 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 
 	private void updatePhotos(){
 		localVersion = getVersion();	//获得当前的版本号
-		if( localVersion.equals("AVersion1.0") ){
+		if( localVersion.equals("Aversion1.0") ){
 			//如果是首版，先从Assets中复制一些图片到SD卡
 			folderCopyFromAssetsToSD(this,"Aphoto");
 			//更新图片的数据库，使图库可以检测到刚复制到SD卡的图片

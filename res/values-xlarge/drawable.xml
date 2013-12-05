@@ -15,7 +15,6 @@
 -->
 <resources>
     <item name="ic_effects_holo_light" type="drawable">@drawable/ic_effects_holo_light_xlarge</item>
-    <item name="ic_exposure_holo_light" type="drawable">@drawable/ic_exposure_holo_light_xlarge</item>
     <item name="ic_flash_auto_holo_light" type="drawable">@drawable/ic_flash_auto_holo_light_xlarge</item>
     <item name="ic_flash_off_holo_light" type="drawable">@drawable/ic_flash_off_holo_light_xlarge</item>
     <item name="ic_flash_on_holo_light" type="drawable">@drawable/ic_flash_on_holo_light_xlarge</item>
