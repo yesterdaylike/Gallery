@@ -15,6 +15,11 @@ import java.net.URL;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+import net.youmi.android.AdManager;
+import net.youmi.android.banner.AdSize;
+import net.youmi.android.banner.AdView;
+import net.youmi.android.spot.SpotDialogListener;
+import net.youmi.android.spot.SpotManager;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
@@ -31,6 +36,7 @@ import android.os.PowerManager;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 
 import com.zheng.gallery3d.R;
 import com.zheng.gallery3d.common.Utils;
@@ -59,10 +65,9 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 	private String galleryDirectory = Environment.getExternalStorageDirectory().toString()+"/Aphoto/";
 	private String exDirectory = Environment.getExternalStorageDirectory().toString()+"/";
 	// declare the dialog as a member field of your activity
-	private ProgressDialog mProgressDialog;
+	//private ProgressDialog mProgressDialog;
 	private String localVersion;
 	private String uri_version = "https://dl.dropboxusercontent.com/s/pmdlhgpn3g9tda4/version.txt?dl=1&token_hash=AAF7OIIyirM7C43bN875YWWwDM7SGZZ3VTuP3oPgYuls2w";
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -75,6 +80,25 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 		}
 
 		setContentView(R.layout.main);
+		
+		AdManager.getInstance(this).init("6d5dfe14b9692302","0e7985b5e58e4f31", false);
+
+	    /*SpotManager.getInstance(this).loadSpotAds();
+	    SpotManager.getInstance(this).setSpotTimeout(50000);//5秒
+	    Log.e("zhengwenhui", "onShowSuccess------------------");
+	    SpotManager.getInstance(this).showSpotAds(this, new SpotDialogListener() {
+            @Override
+            public void onShowSuccess() {
+                Log.e("Youmi", "onShowSuccess------------------");
+            }
+
+            @Override
+            public void onShowFailed() {
+                Log.e("Youmi", "onShowFailed------------------");
+            }
+
+        });*/
+	    Log.e("zhengwenhui", "onShowFailed------------------");
 		updatePhotos();//更新图片
 
 		if (savedInstanceState != null) {
@@ -82,6 +106,13 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 		} else {
 			initializeByIntent();
 		}
+		
+		//实例化广告条
+	    AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+	    //获取要嵌入广告条的布局
+	    LinearLayout adLayout=(LinearLayout)findViewById(R.id.adLayout);
+	    //将广告条加入到布局中
+	    adLayout.addView(adView);
 	}
 
 	private void updatePhotos(){
@@ -165,23 +196,23 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 
 	private void downloadImage(){
 		// instantiate it within the onCreate method
-		mProgressDialog = new ProgressDialog(this);
+		/*mProgressDialog = new ProgressDialog(this);
 		mProgressDialog.setMessage("update progress");
 		mProgressDialog.setIndeterminate(true);
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		mProgressDialog.setCancelable(true);
+		mProgressDialog.setCancelable(true);*/
 
 		// execute this when the downloader must be fired
 		final DownloadTask downloadTask = new DownloadTask(this);
 		//downloadTask.execute("https://dl.dropboxusercontent.com/s/co7rf23ryvay2hq/qqjietu.zip?dl=1&token_hash=AAEQLW8vRIcWeI6efV9TLz-1H-jGhQkIJ7sRPLbG4AxkkQ");
 		downloadTask.execute(uri_version);
 
-		mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+		/*mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
 			@Override
 			public void onCancel(DialogInterface dialog) {
 				downloadTask.cancel(true);
 			}
-		});
+		});*/
 	}
 
 	// usually, subclasses of AsyncTask are declared inside the activity class.
@@ -334,21 +365,21 @@ public final class Gallery extends AbstractGalleryActivity implements OnCancelLi
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
-			mProgressDialog.show();
+			//mProgressDialog.show();
 		}
 
 		@Override
 		protected void onProgressUpdate(Integer... progress) {
 			super.onProgressUpdate(progress);
 			// if we get here, length is known, now set indeterminate to false
-			mProgressDialog.setIndeterminate(false);
+			/*mProgressDialog.setIndeterminate(false);
 			mProgressDialog.setMax(100);
-			mProgressDialog.setProgress(progress[0]);
+			mProgressDialog.setProgress(progress[0]);*/
 		}
 
 		@Override
 		protected void onPostExecute(String result) {
-			mProgressDialog.dismiss();
+			//mProgressDialog.dismiss();
 			if (result != null)
 				Log.e("result != null", "Download error: "+result);
 			else

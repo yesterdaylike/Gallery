@@ -659,6 +659,7 @@ containing a value of this type.
         public static final int action_slideshow=0x7f0f002d;
         public static final int action_sync_picasa_albums=0x7f0f0031;
         public static final int action_toggle_full_caching=0x7f0f0000;
+        public static final int adLayout=0x7f0f0012;
         public static final int add_account=0x7f0f0056;
         public static final int appwidget_empty_view=0x7f0f0005;
         public static final int appwidget_loading_item=0x7f0f0004;
@@ -681,11 +682,11 @@ containing a value of this type.
         public static final int curve_menu_rgb=0x7f0f0049;
         public static final int curves_popupmenu=0x7f0f0048;
         public static final int done=0x7f0f0015;
-        public static final int footer=0x7f0f0012;
+        public static final int footer=0x7f0f0011;
         public static final int gallery_root=0x7f0f000f;
         public static final int gl_root_cover=0x7f0f000e;
         public static final int gl_root_view=0x7f0f000d;
-        public static final int header=0x7f0f0011;
+        public static final int header=0x7f0f0010;
         public static final int menu_exposure_indicator=0x7f0f0019;
         public static final int menu_flash_indicator=0x7f0f0018;
         public static final int menu_hdr_indicator=0x7f0f0017;
@@ -724,7 +725,6 @@ containing a value of this type.
         public static final int widget_type_album=0x7f0f0009;
         public static final int widget_type_photo=0x7f0f000a;
         public static final int widget_type_shuffle=0x7f0f000b;
-        public static final int youmi=0x7f0f0010;
     }
     public static final class integer {
         /**  configuration for album page 

@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="lib" path="D:/Users/wenhui/Dropbox/Program Files/workspace/Camera4.2Need/xmp_toolkit_intermediates.jar"/>
 	<classpathentry kind="lib" path="D:/Users/wenhui/Dropbox/Program Files/workspace/Camera4.2Need/mp4parser_intermediates.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/YoumiSdk_v4.06_2013-11-18.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="src_pd"/>
 	<classpathentry kind="src" path="gallerycommon"/>
